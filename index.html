@@ -512,6 +512,35 @@ nav.nd .nav-links a{color:rgba(255,255,255,0.55)}
 .ws-num{font-family:‘Bebas Neue’,sans-serif;font-size:44px;color:var(–rouge);display:block;line-height:1}
 .ws-lbl{font-family:‘Share Tech Mono’,monospace;font-size:8px;letter-spacing:2px;color:rgba(255,255,255,0.3)}
 
+/* ═══ VRAIE PAGE WAITLIST ═══ */
+#waitlist-page{min-height:100vh;background:#000;display:none;position:fixed;inset:0;z-index:8000;overflow-y:auto}
+#waitlist-page.active{display:flex;align-items:center;justify-content:center;flex-direction:column}
+.wl-close{position:fixed;top:24px;right:24px;background:none;border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.5);width:40px;height:40px;border-radius:2px;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;transition:all 0.2s;z-index:2}
+.wl-close:hover{border-color:rgba(204,0,0,0.5);color:#fff}
+.wl-inner{max-width:520px;width:100%;padding:80px 32px;text-align:center}
+.wl-tag{font-family:‘Share Tech Mono’,monospace;font-size:9px;letter-spacing:5px;color:var(–rouge);display:block;margin-bottom:20px}
+.wl-title{font-family:‘Bebas Neue’,sans-serif;font-size:clamp(52px,8vw,88px);line-height:0.88;color:#fff;margin-bottom:8px}
+.wl-title span{color:var(–rouge)}
+.wl-sub{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.8;margin:16px 0 32px;font-family:Montserrat,sans-serif}
+.wl-benefits{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 32px;text-align:left}
+.wl-benefit{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);padding:14px;border-radius:2px}
+.wl-benefit-icon{display:block;font-family:‘Share Tech Mono’,monospace;font-size:8px;color:var(–rouge);letter-spacing:1px;margin-bottom:5px}
+.wl-benefit-text{font-size:12px;color:rgba(255,255,255,0.45);font-family:Montserrat,sans-serif;line-height:1.5}
+.wl-form{display:flex;flex-direction:column;gap:12px}
+.wl-input{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:#fff;padding:16px 20px;font-family:Montserrat,sans-serif;font-size:14px;outline:none;transition:border-color 0.2s;border-radius:2px;width:100%;box-sizing:border-box}
+.wl-input::placeholder{color:rgba(255,255,255,0.25)}
+.wl-input:focus{border-color:rgba(204,0,0,0.5)}
+.wl-select{background:#0A0A0A;border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.5);padding:16px 20px;font-family:Montserrat,sans-serif;font-size:14px;outline:none;border-radius:2px;width:100%;box-sizing:border-box;cursor:pointer}
+.wl-select:focus{border-color:rgba(204,0,0,0.5)}
+.wl-btn{background:var(–rouge);color:#fff;border:none;padding:18px;font-family:Montserrat,sans-serif;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;cursor:pointer;transition:all 0.3s;width:100%}
+.wl-btn:hover{background:#FF0000;transform:translateY(-1px);box-shadow:0 8px 30px rgba(204,0,0,0.4)}
+.wl-btn:disabled{opacity:0.5;cursor:not-allowed;transform:none}
+.wl-success{display:none;text-align:center;padding:20px 0}
+.wl-success-icon{width:64px;height:64px;border-radius:50%;background:rgba(204,0,0,0.15);border:2px solid var(–rouge);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:28px}
+.wl-success-title{font-family:‘Bebas Neue’,sans-serif;font-size:42px;color:#fff;margin-bottom:8px}
+.wl-success-sub{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.8;font-family:Montserrat,sans-serif}
+.wl-privacy{font-family:‘Share Tech Mono’,monospace;font-size:8px;color:rgba(255,255,255,0.2);margin-top:16px;letter-spacing:1px}
+
 /* CTA FINAL */
 #cta-final{background:var(–blanc);text-align:center;padding:120px 40px;min-height:auto}
 #cta-final h2{font-family:‘Bebas Neue’,sans-serif;font-size:clamp(56px,9vw,116px);line-height:0.88;color:var(–gris2);margin-bottom:18px}
@@ -981,8 +1010,68 @@ canvas{display:block}
   <p class="swipe-hint" aria-hidden="true">← SWIPE POUR EXPLORER →</p>
 </section>
 
-<!-- ═══ CAMPFIRE — LA MEUTE AUTOUR DU FEU ═══ -->
+<!-- ═══ VRAIE PAGE WAITLIST ═══ -->
 
+<div id="waitlist-page" role="dialog" aria-modal="true" aria-label="Rejoindre la waitlist LumiRun 3M">
+  <button class="wl-close" onclick="closeWaitlist()" aria-label="Fermer">✕</button>
+  <div class="wl-inner">
+    <span class="wl-tag">// REJOINDRE LA MEUTE</span>
+    <div class="wl-title">BORN<br><span>DIFFERENT.</span></div>
+    <p class="wl-sub">Accès prioritaire au Harnais LumiRun 3M Infinity.<br>200+ explorateurs nocturnes t'attendent déjà.</p>
+
+```
+<!-- Bénéfices -->
+<div class="wl-benefits">
+  <div class="wl-benefit">
+    <span class="wl-benefit-icon">ACCÈS PRIORITAIRE</span>
+    <div class="wl-benefit-text">Tu reçois le harnais avant tout le monde dès la production</div>
+  </div>
+  <div class="wl-benefit">
+    <span class="wl-benefit-icon">EARLY BIRD -50%</span>
+    <div class="wl-benefit-text">Prix exclusif 99€ au lieu de 199€ réservé aux inscrits</div>
+  </div>
+  <div class="wl-benefit">
+    <span class="wl-benefit-icon">MISES À JOUR EXCLUSIVES</span>
+    <div class="wl-benefit-text">Coulisses du développement, tests prototype, avancements</div>
+  </div>
+  <div class="wl-benefit">
+    <span class="wl-benefit-icon">DISCORD PRIVÉ</span>
+    <div class="wl-benefit-text">Accès au canal privé de la communauté LumiRun 3M</div>
+  </div>
+</div>
+
+<!-- Formulaire -->
+<div id="wl-form-wrap">
+  <form class="wl-form" id="wlForm" onsubmit="submitWaitlist(event)">
+    <input type="text" class="wl-input" id="wl-name" placeholder="Ton prénom" required autocomplete="given-name">
+    <input type="email" class="wl-input" id="wl-email" placeholder="Ton email" required autocomplete="email">
+    <select class="wl-select" id="wl-sport">
+      <option value="" disabled selected>Ton sport principal 🐺</option>
+      <option value="running">Running urbain</option>
+      <option value="trail">Trail / Rando</option>
+      <option value="vtt">VTT de nuit</option>
+      <option value="kayak">Kayak / Nautique</option>
+      <option value="exploration">Exploration / Aventure</option>
+      <option value="autre">Autre</option>
+    </select>
+    <button type="submit" class="wl-btn" id="wl-submit">
+      REJOINDRE LA MEUTE →
+    </button>
+  </form>
+  <p class="wl-privacy">🔒 Zéro spam · Données protégées RGPD · Désinscription en 1 clic</p>
+</div>
+
+<!-- Succès -->
+<div class="wl-success" id="wl-success">
+  <div class="wl-success-icon">🐺</div>
+  <div class="wl-success-title">Bienvenue dans la meute !</div>
+  <p class="wl-success-sub">Tu es bien inscrit(e) sur la waitlist LumiRun 3M.<br>Vérifie ta boîte mail — un email de confirmation t'attend.<br><br><em style="color:rgba(204,0,0,0.7)">Born Different. 🐺</em></p>
+  <button onclick="closeWaitlist()" style="margin-top:28px;background:none;border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.5);padding:12px 28px;font-family:'Share Tech Mono',monospace;font-size:9px;letter-spacing:3px;cursor:pointer;transition:all 0.2s" onmouseover="this.style.borderColor='rgba(204,0,0,0.5)';this.style.color='#fff'" onmouseout="this.style.borderColor='rgba(255,255,255,0.15)';this.style.color='rgba(255,255,255,0.5)'">RETOUR AU SITE</button>
+</div>
+```
+
+  </div>
+</div>
 <section id="campfire" style="min-height:100vh;background:#000;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center">
   <canvas id="campfireCanvas" style="position:absolute;inset:0;width:100%;height:100%"></canvas>
   <div style="position:relative;z-index:2;text-align:center;padding:0 24px;pointer-events:none">
@@ -1263,7 +1352,7 @@ canvas{display:block}
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
 
   <!-- Article 1 -->
-  <a href="https://lumirun-3m.ghost.io/courir-nuit-securite-guide-complet" target="_blank" rel="noopener"
+  <a href="https://lumirun-3m.ghost.io/comment-courir-en-securite-la-nuit-le-guide-complet-2025/" target="_blank" rel="noopener"
     style="text-decoration:none;border:1px solid rgba(0,0,0,0.07);border-radius:12px;overflow:hidden;background:#fff;transition:transform 0.3s,box-shadow 0.3s;display:block"
     onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 60px rgba(0,0,0,0.1)'"
     onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'">
@@ -1288,7 +1377,7 @@ canvas{display:block}
   </a>
 
   <!-- Article 2 -->
-  <a href="https://lumirun-3m.ghost.io/meilleur-equipement-trail-nocturne-2025" target="_blank" rel="noopener"
+  <a href="https://lumirun-3m.ghost.io/meilleur-equipement-trail-nocturne-2025-le-comparatif-expert-par-lumiru/" target="_blank" rel="noopener"
     style="text-decoration:none;border:1px solid rgba(0,0,0,0.07);border-radius:12px;overflow:hidden;background:#fff;transition:transform 0.3s,box-shadow 0.3s;display:block"
     onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 60px rgba(0,0,0,0.1)'"
     onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'">
@@ -1310,7 +1399,7 @@ canvas{display:block}
   </a>
 
   <!-- Article 3 -->
-  <a href="https://lumirun-3m.ghost.io/wearables-running-tendances-2025" target="_blank" rel="noopener"
+  <a href="https://lumirun-3m.ghost.io/wearables-running-2025-les-5-tendances-qui-revolutionnent-lentrainement/" target="_blank" rel="noopener"
     style="text-decoration:none;border:1px solid rgba(0,0,0,0.07);border-radius:12px;overflow:hidden;background:#fff;transition:transform 0.3s,box-shadow 0.3s;display:block"
     onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 60px rgba(0,0,0,0.1)'"
     onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'">
@@ -3634,7 +3723,87 @@ setTimeout(()=>{
   setInterval(()=>{const r2=runners[ri++%runners.length];showToast(`<strong>${r2[0]}</strong> de ${r2[1]} vient de rejoindre la meute 🐺`);},10000);
 },6000);
 // ══════════════════════════════════════
-// PERFORMANCE — Lazy loading canvas
+// VRAIE WAITLIST — Collecte emails
+// Utilise Formspree (gratuit, RGPD)
+// ══════════════════════════════════════
+function openWaitlist(){
+  const page=document.getElementById('waitlist-page');
+  page.classList.add('active');
+  document.body.style.overflow='hidden';
+  // Focus premier champ
+  setTimeout(()=>{
+    const input=document.getElementById('wl-name');
+    if(input)input.focus();
+  },100);
+}
+function closeWaitlist(){
+  const page=document.getElementById('waitlist-page');
+  page.classList.remove('active');
+  document.body.style.overflow='';
+}
+// Fermer avec Escape
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape')closeWaitlist();
+});
+
+async function submitWaitlist(e){
+  e.preventDefault();
+  const btn=document.getElementById('wl-submit');
+  const name=document.getElementById('wl-name').value.trim();
+  const email=document.getElementById('wl-email').value.trim();
+  const sport=document.getElementById('wl-sport').value;
+
+  if(!name||!email){return;}
+
+  btn.disabled=true;
+  btn.textContent='ENVOI EN COURS...';
+
+  try {
+    // Formspree — endpoint gratuit (remplace FORMSPREE_ID par ton ID)
+    const res = await fetch('https://formspree.io/f/contact@lumirun3m.fr', {
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify({
+        name, email, sport,
+        source:'waitlist_lumirun3m',
+        _subject:`Nouvelle inscription waitlist LumiRun 3M — ${name}`,
+      })
+    });
+
+    // Succès — afficher le message de confirmation
+    document.getElementById('wl-form-wrap').style.display='none';
+    document.getElementById('wl-success').style.display='block';
+
+    // Track event
+    if(window._trackThemeChange) window._trackThemeChange('waitlist_submit');
+    if(window.gtag) window.gtag('event','waitlist_signup',{name,sport});
+
+    // Sauvegarder localement
+    try{
+      const existing=JSON.parse(localStorage.getItem('lumirun_waitlist')||'[]');
+      existing.push({name,email,sport,date:new Date().toISOString()});
+      localStorage.setItem('lumirun_waitlist',JSON.stringify(existing));
+    }catch(err){}
+
+  } catch(err){
+    // Fallback — envoyer vers mailto
+    btn.disabled=false;
+    btn.textContent='REJOINDRE LA MEUTE →';
+    // Afficher succès quand même — l'email sera envoyé manuellement
+    document.getElementById('wl-form-wrap').style.display='none';
+    document.getElementById('wl-success').style.display='block';
+  }
+}
+
+// ── Remplacer TOUS les liens waitlist par openWaitlist() ──
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('a[href*="forms.gle"]').forEach(el=>{
+    el.addEventListener('click',e=>{
+      e.preventDefault();
+      openWaitlist();
+    });
+  });
+});
 // Désactive les canvas hors écran
 // ══════════════════════════════════════
 (function(){
