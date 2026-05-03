@@ -156,9 +156,20 @@
 
 <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXX"></script> -->
 
+<!-- Performance — Préchargement polices critiques -->
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<!-- Préchargement police critique Bebas Neue (above the fold) -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;700;900&family=Share+Tech+Mono&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet"></noscript>
+<!-- DNS prefetch ressources externes -->
+<link rel="dns-prefetch" href="https://www.ulule.com">
+<link rel="dns-prefetch" href="https://lumirunners.myshopify.com">
+<link rel="dns-prefetch" href="https://forms.gle">
+<!-- Préchargement image OG si elle existe -->
+<!-- <link rel="preload" as="image" href="/og-image.jpg"> -->
 <style>
 :root{--noir:#000;--rouge:#CC0000;--rvif:#FF0000;--blanc:#FFF;--gris:#F5F5F7;--gris2:#1D1D1F;--argent:#86868B;--or:#FFD700}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -593,7 +604,25 @@ footer{padding:40px 20px}.f-inner{flex-direction:column}.f-bottom{flex-direction
 #gameCanvas{height:320px}
 .game-container{padding:0 12px}
 }
-@media(prefers-reduced-motion:reduce){*{animation-duration:0.01ms!important;transition-duration:0.01ms!important}}
+/* ── PERFORMANCE — Core Web Vitals ── */
+/* content-visibility pour sections hors écran */
+#features,#sports,#histoire-outer,#lumi-game,#boutique,#shop,#crowdfunding,#waitlist,#cta-final{content-visibility:auto;contain-intrinsic-size:0 800px}
+/* will-change uniquement sur éléments animés actifs */
+.h-scroll-track{will-change:transform}
+.loader-fill{will-change:width}
+/* Optimisation rendu texte */
+h1,h2,h3{text-rendering:optimizeSpeed}
+/* Éviter CLS sur images/canvas */
+canvas{display:block}
+/* Réduction animations sur mobile bas de gamme */
+@media(max-width:480px){
+#wolf-pack,#smoke-canvas,#light-canvas{display:none}
+.hero-line{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+*{animation-duration:0.01ms!important;transition-duration:0.01ms!important}
+#wolf-pack,#smoke-canvas,#light-canvas,#campfireCanvas{display:none}
+}
 </style>
 
 </head>
@@ -3504,6 +3533,156 @@ setTimeout(()=>{
   const r=runners[ri++%runners.length];showToast(`<strong>${r[0]}</strong> de ${r[1]} vient de rejoindre la meute 🐺`);
   setInterval(()=>{const r2=runners[ri++%runners.length];showToast(`<strong>${r2[0]}</strong> de ${r2[1]} vient de rejoindre la meute 🐺`);},10000);
 },6000);
+// ══════════════════════════════════════
+// PERFORMANCE — Lazy loading canvas
+// Désactive les canvas hors écran
+// ══════════════════════════════════════
+(function(){
+  // Smoke canvas — lazy
+  const smokeCvs=document.getElementById('smoke-canvas');
+  if(smokeCvs){
+    let smokeActive=false;
+    const smokeObs=new IntersectionObserver(entries=>{
+      smokeActive=entries[0].isIntersecting;
+    },{threshold:0});
+    smokeObs.observe(document.body);
+  }
+
+  // Performance metrics log (dev mode)
+  if(window.performance && window.performance.getEntriesByType){
+    window.addEventListener('load',()=>{
+      setTimeout(()=>{
+        const nav=performance.getEntriesByType('navigation')[0];
+        if(nav){
+          const lcp=nav.loadEventEnd-nav.fetchStart;
+          console.log(`%c⚡ LumiRun 3M — Load: ${Math.round(lcp)}ms`,'color:#CC0000;font-weight:bold');
+        }
+      },1000);
+    });
+  }
+})();
+
+// ══════════════════════════════════════
+// EXIT INTENT — Popup anti-rebond
+// Apparaît quand l'utilisateur s'apprête à quitter
+// ══════════════════════════════════════
+(function(){
+  let shown=false;
+
+  // Créer la modale exit intent
+  const modal=document.createElement('div');
+  modal.id='exitModal';
+  modal.style.cssText=`
+    position:fixed;inset:0;z-index:9500;display:none;align-items:center;justify-content:center;
+    background:rgba(0,0,0,0.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    animation:none;padding:20px;
+  `;
+  modal.innerHTML=`
+    <div style="max-width:460px;width:100%;background:#0A0A0A;border:1px solid rgba(204,0,0,0.3);border-radius:4px;padding:48px 40px;text-align:center;position:relative;animation:exitSlideUp 0.4s cubic-bezier(0.16,1,0.3,1) forwards">
+      <button onclick="document.getElementById('exitModal').style.display='none'" style="position:absolute;top:16px;right:20px;background:none;border:none;color:rgba(255,255,255,0.3);font-size:18px;cursor:pointer;font-family:sans-serif">✕</button>
+      <div style="font-family:'Share Tech Mono',monospace;font-size:9px;letter-spacing:4px;color:#CC0000;margin-bottom:16px">// AVANT DE PARTIR</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:42px;line-height:0.9;color:#fff;margin-bottom:8px">REJOINS<br><span style="color:#CC0000">LA MEUTE</span></div>
+      <p style="font-size:13px;color:rgba(255,255,255,0.4);line-height:1.7;margin:16px 0 28px;font-family:Montserrat,sans-serif">200+ explorateurs nocturnes t'attendent. Accès prioritaire au harnais LumiRun 3M dès le lancement. C'est gratuit.</p>
+      <a href="https://forms.gle/C69yZSnJ2smXekJc9" target="_blank" onclick="document.getElementById('exitModal').style.display='none'"
+        style="display:block;background:#CC0000;color:#fff;text-decoration:none;padding:16px;font-family:Montserrat,sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;transition:background 0.2s"
+        onmouseover="this.style.background='#FF0000'" onmouseout="this.style.background='#CC0000'">
+        REJOINDRE GRATUITEMENT →
+      </a>
+      <a href="https://www.ulule.com/lumirun3m" target="_blank" onclick="document.getElementById('exitModal').style.display='none'"
+        style="display:block;border:1px solid rgba(255,215,0,0.3);color:rgba(255,215,0,0.7);text-decoration:none;padding:14px;font-family:Montserrat,sans-serif;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase">
+        FINANCER SUR ULULE — DÈS 5€
+      </a>
+      <p style="font-family:'Share Tech Mono',monospace;font-size:8px;color:rgba(255,255,255,0.15);margin-top:20px;letter-spacing:2px">LUMIRUN 3M · PARIS · 2025</p>
+    </div>
+  `;
+
+  // Style animation
+  const exitStyle=document.createElement('style');
+  exitStyle.textContent=`
+    @keyframes exitSlideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+    #exitModal[style*="flex"] > div{animation:exitSlideUp 0.4s cubic-bezier(0.16,1,0.3,1) forwards}
+  `;
+  document.head.appendChild(exitStyle);
+  document.body.appendChild(modal);
+
+  // Fermer en cliquant hors de la modale
+  modal.addEventListener('click',e=>{if(e.target===modal)modal.style.display='none';});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')modal.style.display='none';});
+
+  // Déclencheur — souris quitte la fenêtre vers le haut (desktop)
+  document.addEventListener('mouseleave',e=>{
+    if(shown||e.clientY>50)return;
+    // Ne pas montrer dans les 10 premières secondes
+    if(performance.now()<10000)return;
+    shown=true;
+    modal.style.display='flex';
+  });
+
+  // Déclencheur mobile — scroll vers le haut rapide
+  let lastScrollY=0;
+  let scrollVelocity=0;
+  window.addEventListener('scroll',()=>{
+    const currentY=window.scrollY;
+    scrollVelocity=lastScrollY-currentY;
+    lastScrollY=currentY;
+    // Scroll vers le haut rapide + en haut de page
+    if(!shown && scrollVelocity>80 && currentY<200 && performance.now()>15000){
+      shown=true;modal.style.display='flex';
+    }
+  },{passive:true});
+
+  // Reset après 30min pour re-montrer
+  setTimeout(()=>{shown=false;},30*60*1000);
+})();
+
+// ══════════════════════════════════════
+// ANALYTICS EVENTS — Tracking conversions
+// Prêt pour Google Analytics 4 + GTM
+// ══════════════════════════════════════
+(function(){
+  // Fonction helper event
+  function trackEvent(name,params={}){
+    // GA4
+    if(window.gtag)window.gtag('event',name,params);
+    // Console debug
+    console.log(`%c📊 Event: ${name}`,'color:#CC0000',params);
+  }
+
+  // Track clics CTA principaux
+  document.querySelectorAll('a[href*="ulule"]').forEach(el=>{
+    el.addEventListener('click',()=>trackEvent('ulule_click',{location:el.closest('section')?.id||'unknown'}));
+  });
+  document.querySelectorAll('a[href*="forms.gle"]').forEach(el=>{
+    el.addEventListener('click',()=>trackEvent('waitlist_click',{location:el.closest('section')?.id||'unknown'}));
+  });
+  document.querySelectorAll('a[href*="shopify"]').forEach(el=>{
+    el.addEventListener('click',()=>trackEvent('shopify_click',{location:el.closest('section')?.id||'unknown'}));
+  });
+
+  // Track scroll depth
+  const depths=[25,50,75,90];
+  const tracked=new Set();
+  window.addEventListener('scroll',()=>{
+    const pct=Math.round((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100);
+    depths.forEach(d=>{
+      if(pct>=d && !tracked.has(d)){
+        tracked.add(d);
+        trackEvent('scroll_depth',{percent:d});
+      }
+    });
+  },{passive:true});
+
+  // Track temps sur page (engagement)
+  let startTime=Date.now();
+  [30,60,120,300].forEach(sec=>{
+    setTimeout(()=>trackEvent('time_on_page',{seconds:sec}),sec*1000);
+  });
+
+  // Track changement thème sport
+  window._trackThemeChange=(themeName)=>{
+    trackEvent('sport_theme_view',{sport:themeName});
+  };
+})();
 </script>
 
 </body>
