@@ -699,12 +699,180 @@ footer{padding:40px 20px}.f-inner{flex-direction:column}.f-bottom{flex-direction
     <div class="histoire-inner">
       <div id="histoireLeft"><div class="h-prog"><div class="h-prog-fill" id="hProgFill"></div></div></div>
       <div class="histoire-right">
-        <div class="h-visual active" id="hVis0"><div class="h-vis-inner">🏀</div><div class="h-quote"><p>Le sport de haut niveau comme <em>philosophie de vie</em></p><div class="h-founder">// Basketteur · Artiste · Entrepreneur</div></div></div>
-        <div class="h-visual" id="hVis1"><div class="h-vis-inner">🏃</div><div class="h-quote"><p><em>1 500 km</em> en 3 ans. Chaque foulée, une méditation.</p><div class="h-founder">// La reconversion running</div></div></div>
-        <div class="h-visual" id="hVis2"><div class="h-vis-inner">🌙</div><div class="h-quote"><p>"Comment être vu ?" — <em>La nuit du déclic</em></p><div class="h-founder">// Un 12km nocturne change tout</div></div></div>
-        <div class="h-visual" id="hVis3"><div class="h-vis-inner">🐺</div><div class="h-quote"><p>L'armure des <em>explorateurs nocturnes</em> prend forme</p><div class="h-founder">// LumiRun 3M naît</div></div></div>
+
+```
+    <!-- VISUEL 1 : BASKETBALL — Silhouette athlète -->
+    <div class="h-visual active" id="hVis0">
+      <div class="h-vis-inner">
+        <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:220px;height:220px">
+          <!-- Terrain de basket stylisé -->
+          <circle cx="150" cy="150" r="110" stroke="rgba(204,0,0,0.15)" stroke-width="2" fill="none"/>
+          <circle cx="150" cy="150" r="70" stroke="rgba(204,0,0,0.1)" stroke-width="1.5" fill="none"/>
+          <!-- Ballon -->
+          <circle cx="195" cy="75" r="28" fill="#CC0000" opacity="0.9"/>
+          <path d="M195 47 Q195 75 195 103" stroke="rgba(0,0,0,0.3)" stroke-width="1.5" fill="none"/>
+          <path d="M167 75 Q195 75 223 75" stroke="rgba(0,0,0,0.3)" stroke-width="1.5" fill="none"/>
+          <path d="M172 57 Q195 65 210 85" stroke="rgba(0,0,0,0.2)" stroke-width="1.2" fill="none"/>
+          <path d="M180 92 Q195 84 218 65" stroke="rgba(0,0,0,0.2)" stroke-width="1.2" fill="none"/>
+          <!-- Silhouette joueur -->
+          <circle cx="140" cy="100" r="16" fill="white" opacity="0.9"/>
+          <path d="M140 116 L128 155 L118 190" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.9"/>
+          <path d="M128 135 L108 125 L100 130" stroke="white" stroke-width="7" stroke-linecap="round" fill="none" opacity="0.9"/>
+          <path d="M128 135 L155 122 L192 78" stroke="white" stroke-width="7" stroke-linecap="round" fill="none" opacity="0.9"/>
+          <path d="M128 155 L115 188 L108 205" stroke="white" stroke-width="8" stroke-linecap="round" fill="none" opacity="0.9"/>
+          <path d="M128 155 L140 190 L145 208" stroke="white" stroke-width="8" stroke-linecap="round" fill="none" opacity="0.9"/>
+          <!-- Lignes terrain -->
+          <line x1="50" y1="240" x2="250" y2="240" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+          <path d="M100 240 Q100 215 150 215 Q200 215 200 240" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" fill="none"/>
+        </svg>
       </div>
+      <div class="h-quote"><p>Le sport de haut niveau comme <em>philosophie de vie</em></p><div class="h-founder">// Basketteur · Artiste · Entrepreneur</div></div>
     </div>
+
+    <!-- VISUEL 2 : RUNNING — Silhouette coureur avec km -->
+    <div class="h-visual" id="hVis1">
+      <div class="h-vis-inner">
+        <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:220px;height:220px">
+          <!-- Route/piste -->
+          <path d="M20 250 Q150 230 280 250" stroke="rgba(255,255,255,0.15)" stroke-width="3" fill="none"/>
+          <path d="M40 260 Q150 242 260 260" stroke="rgba(255,255,255,0.08)" stroke-width="2" fill="none"/>
+          <!-- Compteur kilométrique -->
+          <rect x="180" y="40" width="90" height="50" rx="8" fill="rgba(204,0,0,0.2)" stroke="#CC0000" stroke-width="1.5"/>
+          <text x="225" y="62" font-size="14" fill="#CC0000" text-anchor="middle" font-family="monospace" font-weight="bold">1 500</text>
+          <text x="225" y="78" font-size="9" fill="rgba(255,255,255,0.6)" text-anchor="middle" font-family="monospace">KM</text>
+          <!-- Silhouette coureur dynamique -->
+          <circle cx="120" cy="85" r="16" fill="white" opacity="0.9"/>
+          <!-- Corps incliné en avant -->
+          <path d="M120 101 L105 140 L95 175" stroke="white" stroke-width="8" stroke-linecap="round" fill="none" opacity="0.9"/>
+          <!-- Bras gauche en avant -->
+          <path d="M110 115 L85 100 L78 105" stroke="white" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.9"/>
+          <!-- Bras droit en arrière -->
+          <path d="M110 115 L135 128 L145 120" stroke="white" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.9"/>
+          <!-- Jambe avant -->
+          <path d="M95 175 L108 210 L120 225" stroke="white" stroke-width="8" stroke-linecap="round" fill="none" opacity="0.9"/>
+          <!-- Jambe arrière -->
+          <path d="M95 175 L80 200 L65 205" stroke="white" stroke-width="8" stroke-linecap="round" fill="none" opacity="0.9"/>
+          <!-- Bandes réfléchissantes LumiRun -->
+          <path d="M100 118 L120 113" stroke="#CC0000" stroke-width="4" stroke-linecap="round"/>
+          <path d="M98 126 L118 121" stroke="#CC0000" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+          <!-- Traînée de vitesse -->
+          <path d="M60 90 L90 88" stroke="rgba(204,0,0,0.4)" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 3"/>
+          <path d="M50 100 L85 98" stroke="rgba(204,0,0,0.3)" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 4"/>
+          <path d="M55 110 L88 108" stroke="rgba(204,0,0,0.2)" stroke-width="1" stroke-linecap="round" stroke-dasharray="3 5"/>
+          <!-- Étoiles nuit -->
+          <circle cx="40" cy="40" r="2" fill="white" opacity="0.5"/>
+          <circle cx="160" cy="30" r="1.5" fill="white" opacity="0.4"/>
+          <circle cx="270" cy="55" r="2" fill="white" opacity="0.45"/>
+        </svg>
+      </div>
+      <div class="h-quote"><p><em>1 500 km</em> en 3 ans. Chaque foulée, une méditation.</p><div class="h-founder">// La reconversion running</div></div>
+    </div>
+
+    <!-- VISUEL 3 : NUIT DU DÉCLIC — Route nocturne + flash d'inspiration -->
+    <div class="h-visual" id="hVis2">
+      <div class="h-vis-inner">
+        <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:220px;height:220px">
+          <!-- Ciel nocturne -->
+          <rect width="300" height="300" fill="none"/>
+          <!-- Lune -->
+          <circle cx="240" cy="50" r="22" fill="white" opacity="0.7"/>
+          <circle cx="250" cy="44" r="18" fill="#0D0000" opacity="0.9"/>
+          <!-- Étoiles -->
+          <circle cx="40" cy="35" r="2" fill="white" opacity="0.6"/>
+          <circle cx="80" cy="20" r="1.5" fill="white" opacity="0.5"/>
+          <circle cx="130" cy="30" r="2" fill="white" opacity="0.55"/>
+          <circle cx="180" cy="18" r="1.5" fill="white" opacity="0.4"/>
+          <circle cx="60" cy="70" r="1.5" fill="white" opacity="0.35"/>
+          <circle cx="200" cy="65" r="2" fill="white" opacity="0.45"/>
+          <!-- Route qui fuit -->
+          <path d="M60 280 Q150 200 240 280" stroke="rgba(255,255,255,0.2)" stroke-width="3" fill="none"/>
+          <path d="M80 280 Q150 210 220 280" stroke="rgba(255,255,255,0.08)" stroke-width="2" fill="none"/>
+          <line x1="150" y1="215" x2="150" y2="275" stroke="rgba(255,255,255,0.2)" stroke-width="2" stroke-dasharray="8 6"/>
+          <!-- Runner invisible en fond -->
+          <circle cx="200" cy="130" r="10" fill="rgba(255,255,255,0.15)"/>
+          <path d="M200 140 L193 162 L185 180" stroke="rgba(255,255,255,0.12)" stroke-width="5" stroke-linecap="round" fill="none"/>
+          <path d="M193 150 L180 144" stroke="rgba(255,255,255,0.1)" stroke-width="4" stroke-linecap="round" fill="none"/>
+          <!-- Runner principal avec harnais LumiRun allumé -->
+          <circle cx="110" cy="110" r="14" fill="white" opacity="0.9"/>
+          <path d="M110 124 L100 158 L92 178" stroke="white" stroke-width="7" stroke-linecap="round" fill="none" opacity="0.9"/>
+          <path d="M100 138 L80 128" stroke="white" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.9"/>
+          <path d="M100 138 L122 130" stroke="white" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.9"/>
+          <path d="M92 178 L82 200" stroke="white" stroke-width="7" stroke-linecap="round" fill="none" opacity="0.9"/>
+          <path d="M92 178 L102 200" stroke="white" stroke-width="7" stroke-linecap="round" fill="none" opacity="0.9"/>
+          <!-- Harnais lumineux -->
+          <path d="M96 130 L116 125" stroke="#CC0000" stroke-width="4" stroke-linecap="round"/>
+          <!-- Halo de lumière LumiRun -->
+          <circle cx="110" cy="145" r="30" stroke="#CC0000" stroke-width="1" opacity="0.3" fill="none"/>
+          <circle cx="110" cy="145" r="20" stroke="#CC0000" stroke-width="1.5" opacity="0.5" fill="none"/>
+          <!-- Point d'interrogation / déclic -->
+          <text x="150" y="100" font-size="42" fill="#CC0000" opacity="0.8" font-family="sans-serif" font-weight="bold">?</text>
+        </svg>
+      </div>
+      <div class="h-quote"><p>"Comment être vu ?" — <em>La nuit du déclic</em></p><div class="h-founder">// Un 12km nocturne change tout</div></div>
+    </div>
+
+    <!-- VISUEL 4 : LUMI MASCOTTE — Logo prend forme -->
+    <div class="h-visual" id="hVis3">
+      <div class="h-vis-inner">
+        <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:220px;height:220px" id="lumi-logo-svg">
+          <!-- Halo rouge externe -->
+          <circle cx="150" cy="148" r="95" stroke="#CC0000" stroke-width="1" opacity="0.15" fill="none"/>
+          <circle cx="150" cy="148" r="78" stroke="#CC0000" stroke-width="1.5" opacity="0.25" fill="none"/>
+          <!-- Corps LUMI — forme géométrique simple -->
+          <!-- Tête ronde principale -->
+          <ellipse cx="150" cy="138" rx="52" ry="50" fill="#0A0A0A"/>
+          <!-- Museau/truffe -->
+          <ellipse cx="150" cy="158" rx="28" ry="20" fill="#111"/>
+          <!-- Oreilles pointues — signature LUMI -->
+          <path d="M108 110 L98 75 L125 100Z" fill="#0A0A0A"/>
+          <path d="M192 110 L202 75 L175 100Z" fill="#0A0A0A"/>
+          <!-- Intérieur oreilles rouge -->
+          <path d="M110 108 L102 80 L122 101Z" fill="#CC0000" opacity="0.7"/>
+          <path d="M190 108 L198 80 L178 101Z" fill="#CC0000" opacity="0.7"/>
+          <!-- Yeux — signature rouge lumineux LUMI -->
+          <ellipse cx="133" cy="132" rx="10" ry="11" fill="#CC0000"/>
+          <ellipse cx="167" cy="132" rx="10" ry="11" fill="#CC0000"/>
+          <!-- Pupilles noires -->
+          <ellipse cx="134" cy="133" rx="5" ry="6" fill="#000"/>
+          <ellipse cx="168" cy="133" rx="5" ry="6" fill="#000"/>
+          <!-- Brillance yeux -->
+          <circle cx="137" cy="129" r="2.5" fill="white" opacity="0.8"/>
+          <circle cx="171" cy="129" r="2.5" fill="white" opacity="0.8"/>
+          <!-- Glow yeux -->
+          <ellipse cx="133" cy="132" rx="14" ry="15" stroke="#CC0000" stroke-width="2" opacity="0.4" fill="none"/>
+          <ellipse cx="167" cy="132" rx="14" ry="15" stroke="#CC0000" stroke-width="2" opacity="0.4" fill="none"/>
+          <!-- Nez -->
+          <ellipse cx="150" cy="152" rx="8" ry="5" fill="#1A0000"/>
+          <ellipse cx="150" cy="151" rx="5" ry="3" fill="#2A0000"/>
+          <!-- Bandes réfléchissantes sur le front -->
+          <path d="M118 118 Q150 112 182 118" stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+          <path d="M122 125 Q150 119 178 125" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.35"/>
+          <!-- Corps simplifié -->
+          <path d="M100 180 Q100 165 150 162 Q200 165 200 180 L198 225 Q198 235 150 235 Q102 235 102 225 Z" fill="#0A0A0A"/>
+          <!-- Harnais sur le corps -->
+          <path d="M115 175 L150 168 L185 175" stroke="#CC0000" stroke-width="3" stroke-linecap="round" fill="none"/>
+          <path d="M115 175 L115 210" stroke="#CC0000" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+          <path d="M185 175 L185 210" stroke="#CC0000" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+          <path d="M115 210 Q150 216 185 210" stroke="#CC0000" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+          <!-- LED sur harnais -->
+          <circle cx="150" cy="192" r="5" fill="#CC0000"/>
+          <circle cx="150" cy="192" r="9" stroke="#CC0000" stroke-width="1" opacity="0.4" fill="none"/>
+          <!-- Pattes avant -->
+          <path d="M112 225 L105 255 L98 265" stroke="#0A0A0A" stroke-width="14" stroke-linecap="round" fill="none"/>
+          <path d="M188 225 L195 255 L202 265" stroke="#0A0A0A" stroke-width="14" stroke-linecap="round" fill="none"/>
+          <!-- Queue -->
+          <path d="M198 185 Q225 170 235 150 Q240 135 228 128" stroke="#0A0A0A" stroke-width="10" stroke-linecap="round" fill="none"/>
+          <!-- LUMIRUN 3M text -->
+          <text x="150" y="285" font-size="11" fill="rgba(204,0,0,0.5)" text-anchor="middle" font-family="monospace" font-weight="bold" letter-spacing="3">LUMIRUN 3M</text>
+        </svg>
+      </div>
+      <div class="h-quote"><p>L'armure des <em>explorateurs nocturnes</em> prend forme</p><div class="h-founder">// LumiRun 3M naît</div></div>
+    </div>
+
+  </div>
+</div>
+```
+
   </div>
 </div>
 
@@ -1125,7 +1293,8 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeVeille();});
 })();
 
 // ══════════════════════════════════════
-// WOLF PACK — 5 loups vitesses variées
+// LUMI CORPORATE MASCOT — Style Cetelem
+// Runner traversant le site + idle
 // ══════════════════════════════════════
 (function(){
   const cvs=document.getElementById('wolf-pack');if(!cvs)return;
@@ -1134,69 +1303,220 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeVeille();});
   cvs.width=W;cvs.height=H;
   window.addEventListener('resize',()=>{W=window.innerWidth;H=window.innerHeight;cvs.width=W;cvs.height=H;},{ passive:true });
 
-  function drawWolf(x,y,sc,dir,eye,alpha,name,t){
-    ctx.save();ctx.globalAlpha=alpha;ctx.translate(x,y);ctx.scale(dir*sc,sc);
-    ctx.fillStyle='#080808';ctx.strokeStyle='rgba(204,0,0,0.5)';ctx.lineWidth=1.5;
-    ctx.beginPath();ctx.ellipse(0,0,28,18,0,0,Math.PI*2);ctx.fill();ctx.stroke();
-    ctx.fillStyle='#101010';ctx.beginPath();ctx.ellipse(20,2,14,10,0.2,0,Math.PI*2);ctx.fill();
-    ctx.fillStyle='#080808';ctx.strokeStyle='rgba(204,0,0,0.45)';ctx.lineWidth=1.5;
-    ctx.beginPath();ctx.ellipse(30,-10,18,14,-0.15,0,Math.PI*2);ctx.fill();ctx.stroke();
-    ctx.fillStyle='#111';ctx.beginPath();ctx.ellipse(44,-5,10,7,0,0,Math.PI*2);ctx.fill();
-    ctx.fillStyle='#1a0000';ctx.beginPath();ctx.ellipse(52,-4,3,2.5,0,0,Math.PI*2);ctx.fill();
-    ctx.fillStyle='#080808';ctx.strokeStyle='rgba(204,0,0,0.4)';ctx.lineWidth=1;
-    ctx.beginPath();ctx.moveTo(18,-22);ctx.lineTo(24,-8);ctx.lineTo(12,-8);ctx.closePath();ctx.fill();ctx.stroke();
-    ctx.beginPath();ctx.moveTo(30,-24);ctx.lineTo(36,-10);ctx.lineTo(24,-10);ctx.closePath();ctx.fill();ctx.stroke();
-    const ep=0.78+Math.sin(t*3)*0.22;
-    ctx.shadowColor=eye;ctx.shadowBlur=13*ep;ctx.fillStyle=eye;ctx.beginPath();ctx.arc(36,-12,3.5,0,Math.PI*2);ctx.fill();ctx.shadowBlur=0;
-    ctx.strokeStyle='rgba(204,0,0,0.3)';ctx.lineWidth=5;ctx.lineCap='round';
-    ctx.beginPath();ctx.moveTo(-22,-2);ctx.quadraticCurveTo(-40,-18+Math.sin(t*2)*7,-36,-30+Math.sin(t*1.5)*5);ctx.stroke();
-    ctx.strokeStyle='#0D0D0D';ctx.lineWidth=5;
-    const lg=Math.sin(t*6)*8;
-    ctx.beginPath();ctx.moveTo(12,14);ctx.lineTo(12+lg*0.3,28);ctx.stroke();ctx.beginPath();ctx.moveTo(22,15);ctx.lineTo(22-lg*0.3,29);ctx.stroke();ctx.beginPath();ctx.moveTo(-4,14);ctx.lineTo(-4-lg*0.3,28);ctx.stroke();ctx.beginPath();ctx.moveTo(-16,12);ctx.lineTo(-16+lg*0.3,26);ctx.stroke();
-    ctx.save();ctx.scale(1/dir,1);ctx.fillStyle='rgba(204,0,0,0.18)';ctx.font='6px Share Tech Mono,monospace';ctx.textAlign='center';ctx.fillText(name,0,40);ctx.restore();
+  // ── LUMI LOGO SVG — Tête iconique style Cetelem ──
+  function drawLumiHead(ctx, cx, cy, size, alpha=1, eyePulse=1, dir=1){
+    ctx.save();ctx.globalAlpha=alpha;ctx.translate(cx,cy);ctx.scale(dir,1);
+    const s=size;
+
+    // Halo glow externe
+    const glow=ctx.createRadialGradient(0,0,s*0.5,0,0,s*1.4);
+    glow.addColorStop(0,'rgba(204,0,0,0.12)');glow.addColorStop(1,'transparent');
+    ctx.fillStyle=glow;ctx.beginPath();ctx.arc(0,0,s*1.4,0,Math.PI*2);ctx.fill();
+
+    // Corps principal — forme géométrique clean
+    ctx.fillStyle='#0A0A0A';
+    ctx.beginPath();ctx.ellipse(0,s*0.05,s*0.52,s*0.48,0,0,Math.PI*2);ctx.fill();
+
+    // Museau
+    ctx.fillStyle='#111111';
+    ctx.beginPath();ctx.ellipse(0,s*0.22,s*0.28,s*0.2,0,0,Math.PI*2);ctx.fill();
+
+    // Oreilles pointues — SIGNATURE LUMI
+    // Gauche
+    ctx.fillStyle='#0A0A0A';
+    ctx.beginPath();ctx.moveTo(-s*0.38,s*0.02);ctx.lineTo(-s*0.52,-s*0.48);ctx.lineTo(-s*0.18,-s*0.08);ctx.closePath();ctx.fill();
+    // Rouge intérieur gauche
+    ctx.fillStyle='#CC0000';ctx.globalAlpha=alpha*0.75;
+    ctx.beginPath();ctx.moveTo(-s*0.36,s*0.0);ctx.lineTo(-s*0.48,-s*0.42);ctx.lineTo(-s*0.2,-s*0.06);ctx.closePath();ctx.fill();
+    // Droite
+    ctx.fillStyle='#0A0A0A';ctx.globalAlpha=alpha;
+    ctx.beginPath();ctx.moveTo(s*0.38,s*0.02);ctx.lineTo(s*0.52,-s*0.48);ctx.lineTo(s*0.18,-s*0.08);ctx.closePath();ctx.fill();
+    // Rouge intérieur droit
+    ctx.fillStyle='#CC0000';ctx.globalAlpha=alpha*0.75;
+    ctx.beginPath();ctx.moveTo(s*0.36,s*0.0);ctx.lineTo(s*0.48,-s*0.42);ctx.lineTo(s*0.2,-s*0.06);ctx.closePath();ctx.fill();
+    ctx.globalAlpha=alpha;
+
+    // YEUX — Signature rouge lumineux
+    const eyeGlow=eyePulse;
+    // Œil gauche
+    ctx.save();ctx.shadowColor='#CC0000';ctx.shadowBlur=s*0.3*eyeGlow;
+    ctx.fillStyle='#CC0000';
+    ctx.beginPath();ctx.ellipse(-s*0.18,-s*0.05,s*0.12,s*0.13,0,0,Math.PI*2);ctx.fill();
+    ctx.fillStyle='#000';ctx.beginPath();ctx.ellipse(-s*0.17,-s*0.05,s*0.06,s*0.08,0,0,Math.PI*2);ctx.fill();
+    ctx.fillStyle='rgba(255,255,255,0.85)';ctx.beginPath();ctx.arc(-s*0.14,-s*0.09,s*0.03,0,Math.PI*2);ctx.fill();
+    // Œil droit
+    ctx.fillStyle='#CC0000';
+    ctx.beginPath();ctx.ellipse(s*0.18,-s*0.05,s*0.12,s*0.13,0,0,Math.PI*2);ctx.fill();
+    ctx.fillStyle='#000';ctx.beginPath();ctx.ellipse(s*0.19,-s*0.05,s*0.06,s*0.08,0,0,Math.PI*2);ctx.fill();
+    ctx.fillStyle='rgba(255,255,255,0.85)';ctx.beginPath();ctx.arc(s*0.22,-s*0.09,s*0.03,0,Math.PI*2);ctx.fill();
+    ctx.shadowBlur=0;ctx.restore();
+
+    // Nez
+    ctx.fillStyle='#1A0000';
+    ctx.beginPath();ctx.ellipse(0,s*0.18,s*0.08,s*0.055,0,0,Math.PI*2);ctx.fill();
+
+    // Bandes réfléchissantes sur le front
+    ctx.strokeStyle='rgba(255,255,255,0.55)';ctx.lineWidth=s*0.025;ctx.lineCap='round';
+    ctx.beginPath();ctx.moveTo(-s*0.32,-s*0.14);ctx.quadraticCurveTo(0,-s*0.22,s*0.32,-s*0.14);ctx.stroke();
+    ctx.strokeStyle='rgba(255,255,255,0.25)';ctx.lineWidth=s*0.015;
+    ctx.beginPath();ctx.moveTo(-s*0.28,-s*0.06);ctx.quadraticCurveTo(0,-s*0.14,s*0.28,-s*0.06);ctx.stroke();
+
     ctx.restore();
   }
-  function drawTrail(trail,color){
-    if(trail.length<2)return;
-    for(let i=1;i<trail.length;i++){ctx.save();ctx.globalAlpha=(i/trail.length)*0.09;ctx.strokeStyle=color;ctx.lineWidth=2;ctx.shadowColor=color;ctx.shadowBlur=3;ctx.beginPath();ctx.moveTo(trail[i-1].x,trail[i-1].y);ctx.lineTo(trail[i].x,trail[i].y);ctx.stroke();ctx.restore();}
+
+  // ── LUMI CORPS EN COURSE — Style cartoon clean ──
+  function drawLumiRunning(ctx, cx, cy, size, alpha=1, t=0, dir=1){
+    ctx.save();ctx.globalAlpha=alpha;ctx.translate(cx,cy);ctx.scale(dir,1);
+    const s=size;
+    const run=Math.sin(t*8); // cycle course rapide
+    const bob=Math.sin(t*8)*s*0.04; // légère oscillation verticale
+
+    // Traînée de vitesse (particules rouges)
+    for(let i=1;i<=5;i++){
+      ctx.save();ctx.globalAlpha=alpha*(0.18-i*0.03);
+      ctx.fillStyle='#CC0000';
+      ctx.beginPath();ctx.ellipse(-s*(0.6+i*0.18),bob*0.5,s*0.04,s*0.04,0,0,Math.PI*2);ctx.fill();
+      ctx.restore();
+    }
+
+    // Corps principal
+    ctx.fillStyle='#0A0A0A';
+    ctx.beginPath();ctx.ellipse(0,bob,s*0.3,s*0.22,0,0,Math.PI*2);ctx.fill();
+
+    // Tête (vers avant — droite car dir=1)
+    drawLumiHead(ctx, s*0.28, -s*0.28+bob, s*0.32, 1, 0.8+Math.sin(t*3)*0.2, 1);
+
+    // Harnais sur le dos visible
+    ctx.strokeStyle='#CC0000';ctx.lineWidth=s*0.04;ctx.lineCap='round';
+    ctx.beginPath();ctx.moveTo(-s*0.15,bob-s*0.08);ctx.lineTo(s*0.15,bob-s*0.08);ctx.stroke();
+    ctx.beginPath();ctx.moveTo(-s*0.05,bob-s*0.08);ctx.lineTo(-s*0.05,bob+s*0.08);ctx.stroke();
+    ctx.beginPath();ctx.moveTo(s*0.08,bob-s*0.08);ctx.lineTo(s*0.08,bob+s*0.08);ctx.stroke();
+
+    // LED harnais
+    ctx.save();ctx.shadowColor='#CC0000';ctx.shadowBlur=s*0.2*(0.7+Math.sin(t*4)*0.3);
+    ctx.fillStyle='#CC0000';ctx.beginPath();ctx.arc(0,bob,s*0.055,0,Math.PI*2);ctx.fill();
+    ctx.restore();
+
+    // Bandes réfléchissantes corps
+    ctx.strokeStyle='rgba(255,255,255,0.6)';ctx.lineWidth=s*0.03;
+    ctx.beginPath();ctx.moveTo(-s*0.25,bob-s*0.02);ctx.lineTo(s*0.1,bob-s*0.02);ctx.stroke();
+
+    // Pattes COURSE — style cartoon 4 pattes
+    const legF=run; // avant
+    const legB=-run; // arrière
+    ctx.strokeStyle='#0A0A0A';ctx.lineWidth=s*0.1;ctx.lineCap='round';
+
+    // Patte avant gauche
+    ctx.beginPath();
+    ctx.moveTo(-s*0.08,bob+s*0.18);
+    ctx.quadraticCurveTo(-s*0.02,bob+s*0.3+legF*s*0.12,-s*0.12+legF*s*0.15,bob+s*0.42+legF*s*0.06);
+    ctx.stroke();
+    // Patte avant droite
+    ctx.beginPath();
+    ctx.moveTo(s*0.08,bob+s*0.18);
+    ctx.quadraticCurveTo(s*0.14,bob+s*0.3+legB*s*0.1,s*0.02+legB*s*0.14,bob+s*0.4+legB*s*0.05);
+    ctx.stroke();
+    // Patte arrière gauche
+    ctx.beginPath();
+    ctx.moveTo(-s*0.18,bob+s*0.15);
+    ctx.quadraticCurveTo(-s*0.25,bob+s*0.28+legB*s*0.1,-s*0.28+legB*s*0.1,bob+s*0.38);
+    ctx.stroke();
+    // Patte arrière droite
+    ctx.beginPath();
+    ctx.moveTo(s*0.18,bob+s*0.15);
+    ctx.quadraticCurveTo(s*0.24,bob+s*0.26+legF*s*0.1,s*0.26+legF*s*0.08,bob+s*0.36);
+    ctx.stroke();
+
+    // Queue
+    ctx.strokeStyle='#0A0A0A';ctx.lineWidth=s*0.08;ctx.lineCap='round';
+    ctx.beginPath();
+    ctx.moveTo(-s*0.28,bob+s*0.05);
+    ctx.quadraticCurveTo(-s*0.52,bob-s*0.22+Math.sin(t*4)*s*0.08,-s*0.58,bob-s*0.42+Math.sin(t*3)*s*0.06);
+    ctx.stroke();
+
+    ctx.restore();
   }
-  function makeW(name,x,y,vx,vy,sc,eye,alpha,tc,leader,solo){
-    return{name,x,y,vx,vy,bVx:vx,sc,eye,alpha,tc,trail:[],ph:Math.random()*Math.PI*2,ps:0.03+Math.random()*0.06,amp:10+Math.random()*24,leader,solo,st:0,sd:100+Math.floor(Math.random()*200),sm:1};
-  }
-  const wolves=[
-    makeW('LUMI',-80,H*0.28,2.2,0,1.3,'#FF0000',0.9,'#CC0000',true,false),
-    makeW('NOVA',-300,H*0.62,3.3,0,0.95,'#FF2200',0.7,'#880000',false,false),
-    makeW('REX',-550,H*0.45,1.5,0,1.4,'#CC0000',0.52,'#660000',false,false),
-    makeW('ZARA',W+100,H*0.18,-2.7,0.3,0.9,'#FF4400',0.62,'#990000',false,false),
-    makeW('OMBRE',W*0.85,-60,-0.15,1.2,0.75,'#FF6600',0.35,'#553300',false,true),
+
+  // ── ÉTAT LUMI ──
+  // Plusieurs instances de LUMI traversant l'écran à des hauteurs différentes
+  const lumis=[
+    {x:-160, y:H*0.82, vx:2.8, size:55, alpha:0.9, trail:[], ph:0, paused:false, pauseT:0, dir:1},
+    {x:W+100, y:H*0.38, vx:-1.8, size:38, alpha:0.6, trail:[], ph:Math.PI, paused:false, pauseT:0, dir:-1},
+    {x:-300, y:H*0.62, vx:1.4, size:28, alpha:0.4, trail:[], ph:1.2, paused:false, pauseT:0, dir:1},
   ];
+
   let t=0;
   function anim(){
     ctx.clearRect(0,0,W,H);t+=0.016;
-    wolves.forEach(w=>{
-      w.st++;if(w.st>=w.sd){w.st=0;w.sd=100+Math.floor(Math.random()*240);const m=[0.4,0.6,0.8,1,1.2,1.6,2];w.sm=m[Math.floor(Math.random()*m.length)];}
-      w.vx+=(w.bVx*w.sm-w.vx)*0.02;w.ph+=w.ps;
-      if(!w.solo){w.vy+=Math.sin(w.ph*0.3)*0.02;w.vy*=0.98;}
-      w.x+=w.vx;w.y+=w.vy+Math.sin(w.ph)*0.35;
-      const ry=w.y+Math.sin(w.ph*3)*w.amp*0.25;
-      w.trail.push({x:w.x,y:ry});if(w.trail.length>16)w.trail.shift();
-      const zones=[0.1,0.22,0.38,0.52,0.68,0.82];
-      if(w.vx>0&&w.x>W+220){w.x=-220;w.y=H*zones[Math.floor(Math.random()*zones.length)];w.vy=(Math.random()-0.5)*1.2;w.trail=[];w.sm=0.5+Math.random()*1.5;}
-      if(w.vx<0&&w.x<-220){w.x=W+220;w.y=H*zones[Math.floor(Math.random()*zones.length)];w.vy=(Math.random()-0.5)*1;w.trail=[];}
-      if(w.vy>0&&w.y>H+80){w.y=-80;w.x=Math.random()*W;w.trail=[];}
-      if(w.vy<0&&w.y<-80){w.y=H+80;w.x=Math.random()*W;w.trail=[];}
-      if(w.solo){if(Math.random()<0.001)w.vy*=-1;w.y+=Math.sin(t*0.2)*0.3;}
-      const dir=w.vx>=0?1:-1;
-      if(w.leader){ctx.save();ctx.globalAlpha=0.055;const g=ctx.createRadialGradient(w.x,ry,0,w.x,ry,85);g.addColorStop(0,'#CC0000');g.addColorStop(1,'transparent');ctx.fillStyle=g;ctx.beginPath();ctx.arc(w.x,ry,85,0,Math.PI*2);ctx.fill();ctx.restore();}
-      drawTrail(w.trail,w.tc);drawWolf(w.x,ry,w.sc,dir,w.eye,w.alpha,w.name,t);
+
+    lumis.forEach((lumi,idx)=>{
+      lumi.ph+=0.016;
+
+      // Pause aléatoire — LUMI s'arrête et regarde
+      if(!lumi.paused && Math.random()<0.0004 && lumi.size>45){
+        lumi.paused=true;lumi.pauseT=0;
+      }
+      if(lumi.paused){
+        lumi.pauseT+=0.016;
+        if(lumi.pauseT>2.5)lumi.paused=false;
+      } else {
+        lumi.x+=lumi.vx;
+      }
+
+      // Légère ondulation verticale
+      const vy=Math.sin(lumi.ph*2)*0.3;
+      lumi.y+=vy;
+
+      // Rebound vertical
+      if(lumi.y>H*0.92)lumi.y=H*0.92;
+      if(lumi.y<H*0.12)lumi.y=H*0.12;
+
+      // Trail
+      lumi.trail.push({x:lumi.x,y:lumi.y});
+      if(lumi.trail.length>20)lumi.trail.shift();
+
+      // Sortie écran → reappear
+      if(lumi.vx>0 && lumi.x>W+200){
+        lumi.x=-200;
+        lumi.y=H*(0.55+Math.random()*0.3);
+        lumi.trail=[];
+      }
+      if(lumi.vx<0 && lumi.x<-200){
+        lumi.x=W+200;
+        lumi.y=H*(0.25+Math.random()*0.4);
+        lumi.trail=[];
+      }
+
+      // Dessiner trail
+      if(lumi.trail.length>2 && !lumi.paused){
+        for(let i=1;i<lumi.trail.length;i++){
+          ctx.save();
+          ctx.globalAlpha=(i/lumi.trail.length)*0.07*lumi.alpha;
+          ctx.strokeStyle='#CC0000';ctx.lineWidth=lumi.size*0.06;ctx.lineCap='round';
+          ctx.beginPath();ctx.moveTo(lumi.trail[i-1].x,lumi.trail[i-1].y);ctx.lineTo(lumi.trail[i].x,lumi.trail[i].y);ctx.stroke();
+          ctx.restore();
+        }
+      }
+
+      // Dessiner LUMI
+      if(lumi.paused){
+        // Mode idle — LUMI respire et regarde
+        const breathe=Math.sin(lumi.pauseT*2)*2;
+        drawLumiHead(ctx, lumi.x, lumi.y+breathe, lumi.size*0.85, lumi.alpha,
+          0.7+Math.sin(lumi.pauseT*4)*0.3, lumi.dir);
+      } else {
+        drawLumiRunning(ctx, lumi.x, lumi.y, lumi.size, lumi.alpha, t+lumi.ph*2, lumi.dir);
+      }
     });
+
     requestAnimationFrame(anim);
   }
   anim();
 })();
 
 // ══════════════════════════════════════
-// WOLF MASCOT
+// LUMI MASCOT — Section nuit (canvas)
+// Version grand format iconique
 // ══════════════════════════════════════
 (function(){
   const cvs=document.getElementById('wolf-mascot');if(!cvs)return;
@@ -1204,35 +1524,123 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeVeille();});
   const DPR=Math.min(window.devicePixelRatio,2);
   cvs.width=cvs.clientWidth*DPR;cvs.height=cvs.clientHeight*DPR;ctx.scale(DPR,DPR);
   const W=cvs.clientWidth,H=cvs.clientHeight;
+
+  function drawLumiIconic(cx, cy, size, t){
+    const s=size;
+    // Fond radial subtil
+    const bg=ctx.createRadialGradient(cx,cy,0,cx,cy,s*1.8);
+    bg.addColorStop(0,'rgba(204,0,0,0.08)');bg.addColorStop(1,'transparent');
+    ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);
+
+    // Ombre au sol
+    ctx.save();ctx.globalAlpha=0.12*(0.8+Math.sin(t*1.5)*0.2);
+    ctx.fillStyle='#CC0000';
+    ctx.beginPath();ctx.ellipse(cx,cy+s*0.72,s*0.55,s*0.07,0,0,Math.PI*2);ctx.fill();
+    ctx.restore();
+
+    // Légère animation respiration
+    const br=Math.sin(t*1.8)*s*0.012;
+
+    // ── CORPS ──
+    ctx.fillStyle='#080808';
+    ctx.beginPath();ctx.ellipse(cx,cy+s*0.08+br,s*0.42,s*0.38,0,0,Math.PI*2);ctx.fill();
+
+    // Museau
+    ctx.fillStyle='#101010';
+    ctx.beginPath();ctx.ellipse(cx,cy+s*0.28+br,s*0.25,s*0.18,0,0,Math.PI*2);ctx.fill();
+
+    // ── OREILLES POINTUES ──
+    // Gauche
+    ctx.fillStyle='#080808';
+    ctx.beginPath();ctx.moveTo(cx-s*0.32,cy-s*0.08+br);ctx.lineTo(cx-s*0.5,cy-s*0.52+br);ctx.lineTo(cx-s*0.12,cy-s*0.1+br);ctx.closePath();ctx.fill();
+    ctx.fillStyle='#CC0000';ctx.globalAlpha=0.7;
+    ctx.beginPath();ctx.moveTo(cx-s*0.3,cy-s*0.06+br);ctx.lineTo(cx-s*0.46,cy-s*0.46+br);ctx.lineTo(cx-s*0.14,cy-s*0.08+br);ctx.closePath();ctx.fill();
+    ctx.globalAlpha=1;
+    // Droite
+    ctx.fillStyle='#080808';
+    ctx.beginPath();ctx.moveTo(cx+s*0.32,cy-s*0.08+br);ctx.lineTo(cx+s*0.5,cy-s*0.52+br);ctx.lineTo(cx+s*0.12,cy-s*0.1+br);ctx.closePath();ctx.fill();
+    ctx.fillStyle='#CC0000';ctx.globalAlpha=0.7;
+    ctx.beginPath();ctx.moveTo(cx+s*0.3,cy-s*0.06+br);ctx.lineTo(cx+s*0.46,cy-s*0.46+br);ctx.lineTo(cx+s*0.14,cy-s*0.08+br);ctx.closePath();ctx.fill();
+    ctx.globalAlpha=1;
+
+    // ── YEUX — Signature rouge LUMI ──
+    const ep=0.8+Math.sin(t*2.5)*0.2;
+    [-s*0.16, s*0.16].forEach((ex,i)=>{
+      ctx.save();
+      ctx.shadowColor='#FF0000';ctx.shadowBlur=s*0.25*ep;
+      // Blanc yeux (sclère légère)
+      ctx.fillStyle='rgba(255,255,255,0.06)';
+      ctx.beginPath();ctx.ellipse(cx+ex,cy-s*0.04+br,s*0.115,s*0.125,0,0,Math.PI*2);ctx.fill();
+      // Iris rouge
+      ctx.fillStyle='#CC0000';
+      ctx.beginPath();ctx.ellipse(cx+ex,cy-s*0.04+br,s*0.1,s*0.11,0,0,Math.PI*2);ctx.fill();
+      // Pupille
+      ctx.fillStyle='#000';ctx.shadowBlur=0;
+      ctx.beginPath();ctx.ellipse(cx+ex+s*0.01,cy-s*0.04+br,s*0.055,s*0.065,0,0,Math.PI*2);ctx.fill();
+      // Brillance
+      ctx.fillStyle='rgba(255,255,255,0.9)';
+      ctx.beginPath();ctx.arc(cx+ex+s*0.035,cy-s*0.08+br,s*0.025,0,Math.PI*2);ctx.fill();
+      ctx.restore();
+    });
+
+    // ── NEZ ──
+    ctx.fillStyle='#1A0000';
+    ctx.beginPath();ctx.ellipse(cx,cy+s*0.16+br,s*0.07,s*0.05,0,0,Math.PI*2);ctx.fill();
+    ctx.fillStyle='rgba(255,255,255,0.08)';
+    ctx.beginPath();ctx.arc(cx-s*0.025,cy+s*0.14+br,s*0.02,0,Math.PI*2);ctx.fill();
+
+    // ── BANDES RÉFLÉCHISSANTES FRONT ──
+    ctx.strokeStyle='rgba(255,255,255,0.5)';ctx.lineWidth=s*0.022;ctx.lineCap='round';
+    ctx.beginPath();ctx.moveTo(cx-s*0.3,cy-s*0.16+br);ctx.quadraticCurveTo(cx,cy-s*0.24+br,cx+s*0.3,cy-s*0.16+br);ctx.stroke();
+    ctx.strokeStyle='rgba(255,255,255,0.22)';ctx.lineWidth=s*0.013;
+    ctx.beginPath();ctx.moveTo(cx-s*0.26,cy-s*0.09+br);ctx.quadraticCurveTo(cx,cy-s*0.17+br,cx+s*0.26,cy-s*0.09+br);ctx.stroke();
+
+    // ── PATTES AVANT ──
+    ctx.strokeStyle='#080808';ctx.lineWidth=s*0.1;ctx.lineCap='round';
+    const lg=Math.sin(t*1.5)*s*0.025;
+    ctx.beginPath();ctx.moveTo(cx-s*0.18,cy+s*0.38+br);ctx.lineTo(cx-s*0.22,cy+s*0.58+br+lg);ctx.stroke();
+    ctx.beginPath();ctx.moveTo(cx+s*0.18,cy+s*0.38+br);ctx.lineTo(cx+s*0.22,cy+s*0.58+br-lg);ctx.stroke();
+
+    // ── QUEUE ──
+    ctx.strokeStyle='#080808';ctx.lineWidth=s*0.08;ctx.lineCap='round';
+    const qw=Math.sin(t*2)*s*0.06;
+    ctx.beginPath();
+    ctx.moveTo(cx+s*0.38,cy+s*0.22+br);
+    ctx.quadraticCurveTo(cx+s*0.65,cy-s*0.05+qw,cx+s*0.72,cy-s*0.32+qw*0.5);
+    ctx.stroke();
+
+    // ── HARNAIS LUMIRUN ──
+    ctx.strokeStyle='#CC0000';ctx.lineWidth=s*0.03;ctx.lineCap='round';
+    ctx.beginPath();ctx.moveTo(cx-s*0.3,cy+s*0.12+br);ctx.lineTo(cx+s*0.3,cy+s*0.12+br);ctx.stroke();
+    ctx.strokeStyle='rgba(204,0,0,0.5)';ctx.lineWidth=s*0.02;
+    ctx.beginPath();ctx.moveTo(cx-s*0.12,cy+s*0.12+br);ctx.lineTo(cx-s*0.2,cy+s*0.32+br);ctx.stroke();
+    ctx.beginPath();ctx.moveTo(cx+s*0.12,cy+s*0.12+br);ctx.lineTo(cx+s*0.2,cy+s*0.32+br);ctx.stroke();
+    ctx.beginPath();ctx.moveTo(cx-s*0.2,cy+s*0.32+br);ctx.lineTo(cx+s*0.2,cy+s*0.32+br);ctx.stroke();
+    // LED centrale
+    ctx.save();ctx.shadowColor='#CC0000';ctx.shadowBlur=s*0.18*(0.7+Math.sin(t*3)*0.3);
+    ctx.fillStyle='#CC0000';ctx.beginPath();ctx.arc(cx,cy+s*0.22+br,s*0.045,0,Math.PI*2);ctx.fill();
+    ctx.restore();
+
+    // ── PARTICULES ORBITALES ──
+    for(let i=0;i<6;i++){
+      const ang=t*0.45+i*(Math.PI*2/6);
+      const pr=s*(0.72+Math.sin(t*0.6+i)*0.06);
+      const px=cx+Math.cos(ang)*pr,py=cy+Math.sin(ang)*pr*0.55;
+      ctx.save();ctx.globalAlpha=(0.15+Math.sin(t+i)*0.08);
+      ctx.fillStyle='#CC0000';ctx.shadowColor='#CC0000';ctx.shadowBlur=4;
+      ctx.beginPath();ctx.arc(px,py,s*0.018,0,Math.PI*2);ctx.fill();
+      ctx.restore();
+    }
+
+    // ── LABEL ──
+    ctx.fillStyle='rgba(204,0,0,0.22)';ctx.font=`${s*0.08}px Share Tech Mono,monospace`;
+    ctx.textAlign='center';ctx.fillText('LUMI',cx,H-s*0.08);
+  }
+
   let t=0;
   function draw(){
     ctx.clearRect(0,0,W,H);
-    const cx=W/2,cy=H/2+10,br=Math.sin(t*1.5)*4,run=Math.sin(t*5)*10;
-    const bg=ctx.createRadialGradient(cx,cy,0,cx,cy,200);bg.addColorStop(0,'rgba(180,0,0,0.07)');bg.addColorStop(1,'transparent');ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);
-    ctx.save();ctx.globalAlpha=0.1;ctx.fillStyle='#CC0000';ctx.beginPath();ctx.ellipse(cx,cy+85+br*0.4,60,9,0,0,Math.PI*2);ctx.fill();ctx.restore();
-    ctx.strokeStyle='#0D0D0D';ctx.lineWidth=11;ctx.lineCap='round';
-    ctx.beginPath();ctx.moveTo(cx-36,cy+48+br);ctx.lineTo(cx-46,cy+85+Math.sin(t*4)*5);ctx.stroke();
-    ctx.beginPath();ctx.moveTo(cx-16,cy+50+br);ctx.lineTo(cx-10,cy+85+Math.sin(t*4+1)*4);ctx.stroke();
-    ctx.fillStyle='#0A0A0A';ctx.strokeStyle='rgba(204,0,0,0.65)';ctx.lineWidth=2;
-    ctx.save();ctx.translate(0,br*0.4);ctx.beginPath();ctx.ellipse(cx,cy+16,76,50,-0.08,0,Math.PI*2);ctx.fill();ctx.stroke();ctx.restore();
-    ctx.fillStyle='#111';ctx.beginPath();ctx.ellipse(cx+50,cy+20+br*0.3,30,24,0.25,0,Math.PI*2);ctx.fill();
-    ctx.strokeStyle='#0D0D0D';ctx.lineWidth=11;
-    ctx.beginPath();ctx.moveTo(cx+36,cy+46+br);ctx.lineTo(cx+50,cy+85+run*0.6);ctx.stroke();
-    ctx.beginPath();ctx.moveTo(cx+56,cy+42+br);ctx.lineTo(cx+70,cy+83+Math.sin(t*4+2)*6);ctx.stroke();
-    ctx.strokeStyle='rgba(204,0,0,0.4)';ctx.lineWidth=8;ctx.lineCap='round';
-    ctx.beginPath();ctx.moveTo(cx-65,cy+7+br);ctx.quadraticCurveTo(cx-105,cy-16+Math.sin(t*2)*13,cx-95,cy-46+Math.sin(t*2)*9);ctx.stroke();
-    const hx=cx+66,hy=cy-26;
-    ctx.fillStyle='#0A0A0A';ctx.strokeStyle='rgba(204,0,0,0.6)';ctx.lineWidth=2;
-    ctx.beginPath();ctx.ellipse(hx,hy+br*0.25,48,40,0.12,0,Math.PI*2);ctx.fill();ctx.stroke();
-    ctx.fillStyle='#111';ctx.beginPath();ctx.ellipse(hx+36,hy+7+br*0.25,25,17,0,0,Math.PI*2);ctx.fill();
-    ctx.fillStyle='#1a0000';ctx.beginPath();ctx.ellipse(hx+58,hy+6+br*0.25,5.5,4.5,0,0,Math.PI*2);ctx.fill();
-    ctx.fillStyle='#0A0A0A';ctx.strokeStyle='rgba(204,0,0,0.5)';ctx.lineWidth=1.5;
-    ctx.beginPath();ctx.moveTo(hx-13,hy-35+br*0.25);ctx.lineTo(hx-3,hy-10+br*0.25);ctx.lineTo(hx-24,hy-12+br*0.25);ctx.closePath();ctx.fill();ctx.stroke();
-    ctx.beginPath();ctx.moveTo(hx+10,hy-37+br*0.25);ctx.lineTo(hx+20,hy-11+br*0.25);ctx.lineTo(hx-2,hy-13+br*0.25);ctx.closePath();ctx.fill();ctx.stroke();
-    const ep=0.9+Math.sin(t*3)*0.1;
-    ctx.save();ctx.shadowColor='#FF0000';ctx.shadowBlur=18*ep;ctx.fillStyle=`rgb(255,${Math.floor(40+Math.sin(t*2)*20)},0)`;ctx.beginPath();ctx.arc(hx+20,hy-9+br*0.25,6,0,Math.PI*2);ctx.fill();ctx.restore();
-    for(let i=0;i<8;i++){const ang=t*0.5+i*(Math.PI*2/8),r=115+Math.sin(t+i)*16;const px=cx+Math.cos(ang)*r,py=cy+Math.sin(ang)*r*0.52;ctx.save();ctx.globalAlpha=0.2+Math.sin(t+i)*0.08;ctx.fillStyle='#CC0000';ctx.shadowColor='#CC0000';ctx.shadowBlur=6;ctx.beginPath();ctx.arc(px,py,1.8,0,Math.PI*2);ctx.fill();ctx.restore();}
-    ctx.fillStyle='rgba(204,0,0,0.18)';ctx.font='10px Share Tech Mono,monospace';ctx.textAlign='center';ctx.fillText('// LUMI — LEADER DE LA MEUTE',cx,H-14);
+    drawLumiIconic(W/2, H/2-10, Math.min(W,H)*0.42, t);
     t+=0.016;requestAnimationFrame(draw);
   }
   draw();
