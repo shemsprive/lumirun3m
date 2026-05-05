@@ -1,0 +1,40 @@
+{
+  "name": "LumiRun 3M — L'Armure des Explorateurs Nocturnes",
+  "short_name": "LumiRun 3M",
+  "description": "Premier harnais sport connecté pour running, trail, VTT, kayak, marathon et HYROX nocturne.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#CC0000",
+  "orientation": "portrait-primary",
+  "lang": "fr",
+  "scope": "/",
+  "categories": ["sports", "fitness", "outdoor"],
+  "icons": [
+    {"src": "/icon-16.png", "sizes": "16x16", "type": "image/png"},
+    {"src": "/icon-32.png", "sizes": "32x32", "type": "image/png"},
+    {"src": "/icon-180.png", "sizes": "180x180", "type": "image/png"},
+    {"src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable"},
+    {"src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
+  ],
+  "screenshots": [
+    {"src": "/og-image.jpg", "sizes": "1200x630", "type": "image/jpeg"}
+  ],
+  "shortcuts": [
+    {
+      "name": "Financer sur Ulule",
+      "url": "https://www.ulule.com/lumirun3m",
+      "description": "Soutenir LumiRun 3M sur Ulule"
+    },
+    {
+      "name": "Boutique LUMIRUNNER",
+      "url": "https://lumirunners.myshopify.com",
+      "description": "Collection lifestyle Born Different"
+    },
+    {
+      "name": "Blog",
+      "url": "https://lumirun-3m.ghost.io",
+      "description": "Conseils running nocturne et outdoor"
+    }
+  ]
+}
