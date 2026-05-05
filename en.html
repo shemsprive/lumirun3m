@@ -870,15 +870,15 @@ canvas{display:block}
   <div class="nuit-inner">
     <div class="reveal-l">
       <span class="nuit-big" aria-hidden="true">300</span>
-      <h2 class="nuit-title">VISIBLE<br><em>À 300 MÈTRES.</em><br>DANS LE NOIR.</h2>
-      <p class="nuit-text">La technologie 3M Scotchlite certifiée couvre 360° de votre corps. LEDs intelligentes avant et arrière. Mode SOS GPS intégré.</p>
+      <h2 class="nuit-title">VISIBLE<br><em>AT 300 METERS.</em><br>IN THE DARK.</h2>
+      <p class="nuit-text">3M Scotchlite certified technology covers 360° of your body. Smart front and rear LEDs. Integrated GPS SOS mode.</p>
       <div class="nuit-stats">
-        <div class="nuit-stat"><span class="nstat-num">300m</span><span class="nstat-lbl">Visibilité 3M</span></div>
-        <div class="nuit-stat"><span class="nstat-num">360°</span><span class="nstat-lbl">Couverture LED</span></div>
-        <div class="nuit-stat"><span class="nstat-num">12h</span><span class="nstat-lbl">Autonomie</span></div>
+        <div class="nuit-stat"><span class="nstat-num">300m</span><span class="nstat-lbl">3M Visibility</span></div>
+        <div class="nuit-stat"><span class="nstat-num">360°</span><span class="nstat-lbl">LED Coverage</span></div>
+        <div class="nuit-stat"><span class="nstat-num">12h</span><span class="nstat-lbl">Battery Life</span></div>
       </div>
     </div>
-    <div class="nuit-right reveal-r"><canvas id="wolf-mascot" aria-label="LUMI — mascotte loup de LumiRun 3M"></canvas></div>
+    <div class="nuit-right reveal-r"><canvas id="wolf-mascot" aria-label="LUMI — LumiRun 3M wolf mascot"></canvas></div>
   </div>
 </section>
 
@@ -1119,9 +1119,6 @@ canvas{display:block}
         </svg>
       </div>
       <div class="h-quote"><p>Elite sport as a <em>life philosophy</em></p><div class="h-founder">// Basketball Player · Artist · Entrepreneur</div></div>
-    </div>
-
-    <!-- VISUEL 2 : RUNNING — Silhouette coureur avec km -->
     <div class="h-visual" id="hVis1">
       <div class="h-vis-inner">
         <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:220px;height:220px">
@@ -1268,46 +1265,46 @@ canvas{display:block}
   </div>
 </div>
 
-<!-- ═══════════ LUMI GAME ═══════════ -->
+<!-- ═══════════ LUMI DODGE — EXCLUSIVE ENGLISH VERSION ═══════════ -->
 
 <section id="lumi-game">
   <div class="game-section-hdr reveal">
-    <span class="tag">// LUMI — L'Explorateur Nocturne</span>
-    <h2>LUMI <em>RUN 3D</em></h2>
-    <p>// FLÈCHES GAUCHE/DROITE ou A/D pour esquiver · ESPACE pour sauter · 3 ZONES · 3 VIES</p>
+    <span class="tag">// EXCLUSIVE — English Version Only</span>
+    <h2>LUMI <em>DODGE</em></h2>
+    <p>// ARROW KEYS or A/D to move · SPACE to jump · How far can LUMI run?</p>
   </div>
   <div class="game-container">
     <div class="game-wrap reveal">
-      <canvas id="gameCanvas" aria-label="Jeu LUMI RUN 3D — runner pseudo-3D vue arrière"></canvas>
+      <canvas id="gameCanvas" aria-label="LUMI DODGE — dodge obstacles as LUMI runs through the night"></canvas>
       <div class="game-hud" id="gameHud">
         <div class="hud-left"><div class="hud-label">SCORE</div><div class="hud-value" id="scoreDisplay">0</div></div>
-        <div class="hud-center"><div class="hud-label">VIES</div><div class="hud-lives" id="livesDisplay"></div></div>
-        <div class="hud-right" style="align-items:flex-end"><div class="hud-label">MEILLEUR</div><div class="hud-value red" id="hiDisplay">0</div></div>
+        <div class="hud-center"><div class="hud-label">LIVES</div><div class="hud-lives" id="livesDisplay"></div></div>
+        <div class="hud-right" style="align-items:flex-end"><div class="hud-label">BEST</div><div class="hud-value red" id="hiDisplay">0</div></div>
       </div>
       <div class="zone-indicator"><div class="zone-name" id="zoneName"></div></div>
       <!-- START -->
       <div class="g-overlay" id="startOverlay">
-        <div class="go-logo">LUMI<em>RUN</em></div>
-        <div class="go-tagline">// L'EXPLORATEUR NOCTURNE — VUE 3D</div>
-        <button class="go-btn" onclick="startGame()">LANCER LE JEU →</button>
+        <div class="go-logo">LUMI<em>DODGE</em></div>
+        <div class="go-tagline">// EXCLUSIVE · ENGLISH VERSION · BORN DIFFERENT</div>
+        <button class="go-btn" onclick="startGame()">PLAY NOW →</button>
         <div class="go-controls">
-          <span class="go-key">← → ou A/D — ESQUIVER</span>
-          <span class="go-key">ESPACE — SAUTER</span>
-          <span class="go-key">TAP GAUCHE/DROITE — MOBILE</span>
+          <span class="go-key">← → or A/D — DODGE</span>
+          <span class="go-key">SPACE — JUMP</span>
+          <span class="go-key">TAP LEFT/RIGHT — MOBILE</span>
         </div>
       </div>
       <!-- GAME OVER -->
       <div class="g-overlay hidden" id="gameOverOverlay">
         <div class="go-logo">GAME<em>OVER</em></div>
         <div class="go-score" id="gameOverScore">SCORE: 0</div>
-        <div class="go-hi" id="gameOverHi">MEILLEUR: 0</div>
-        <button class="go-btn" onclick="startGame()">REJOUER →</button>
-        <a href="https://forms.gle/C69yZSnJ2smXekJc9" target="_blank" style="margin-top:16px;font-family:'Share Tech Mono',monospace;font-size:9px;letter-spacing:2px;color:var(--rouge);text-decoration:none">→ Rejoins la waitlist LumiRun 3M</a>
+        <div class="go-hi" id="gameOverHi">BEST: 0</div>
+        <button class="go-btn" onclick="startGame()">PLAY AGAIN →</button>
+        <a href="https://forms.gle/C69yZSnJ2smXekJc9" target="_blank" style="margin-top:16px;font-family:'Share Tech Mono',monospace;font-size:9px;letter-spacing:2px;color:var(--rouge);text-decoration:none">→ Join the LumiRun 3M waitlist</a>
       </div>
       <!-- PAUSE -->
       <div class="g-overlay hidden" id="pauseOverlay">
         <div class="go-logo" style="font-size:60px">PAUSE</div>
-        <button class="go-btn" onclick="resumeGame()">REPRENDRE →</button>
+        <button class="go-btn" onclick="resumeGame()">RESUME →</button>
       </div>
     </div>
   </div>
@@ -1330,11 +1327,11 @@ canvas{display:block}
             </div>
           </div>
         </div>
-        <div class="b-content"><div class="b-title">LUMIRUNNER COLLECTION</div><div class="b-sub">// LIFESTYLE — BORN DIFFERENT</div><p class="b-desc">Short, t-shirt, hoodie, casquette — la gamme lifestyle LumiRun. Noir mat, logo Born Different. Disponible maintenant sur notre boutique.</p><div class="b-specs"><span class="b-spec">NOIR MAT</span><span class="b-spec">BORN DIFFERENT</span><span class="b-spec">LIFESTYLE</span><span class="b-spec">PRINT ON DEMAND</span></div><div class="b-btns"><a href="https://lumirunners.myshopify.com" target="_blank" rel="noopener" class="btn-r" style="font-size:12px;padding:12px 26px">🛍️ Shop Now</a></div></div>
+        <div class="b-content"><div class="b-title">LUMIRUNNER COLLECTION</div><div class="b-sub">// LIFESTYLE — BORN DIFFERENT</div><p class="b-desc">Shorts, t-shirts, hoodies, caps — the LumiRun lifestyle range. Matte black, Born Different logo. Available now in our store.</p><div class="b-specs"><span class="b-spec">MATTE BLACK</span><span class="b-spec">BORN DIFFERENT</span><span class="b-spec">LIFESTYLE</span><span class="b-spec">PRINT ON DEMAND</span></div><div class="b-btns"><a href="https://lumirunners.myshopify.com" target="_blank" rel="noopener" class="btn-r" style="font-size:12px;padding:12px 26px">🛍️ Shop Now</a></div></div>
       </div>
       <div class="b-card reveal-r">
         <div class="b-visual"><div class="b-badge b-or">🚀 ULULE EN LIGNE</div><canvas id="harness-canvas" aria-label="Harnais LumiRun 3M Infinity animé"></canvas></div>
-        <div class="b-content"><div class="b-title">HARNAIS LUMIRUN 3M</div><div class="b-sub">// INFINITY — MODULE CORE AMOVIBLE</div><p class="b-desc">The armor of night explorers. Module CORE amovible IPX7, textile Oeko-Tex, écran LED 600 nits, GPS et mode SOS. Campagne Ulule active.</p><div class="b-specs"><span class="b-spec">MODULE CORE</span><span class="b-spec">OEKO-TEX</span><span class="b-spec">3M 360°</span><span class="b-spec">GPS</span><span class="b-spec">600 NITS</span><span class="b-spec">IPX7</span></div><div class="b-btns"><a href="https://forms.gle/C69yZSnJ2smXekJc9" target="_blank" rel="noopener" class="btn-r" style="font-size:12px;padding:12px 22px">✉️ Waitlist</a><a href="https://www.ulule.com/lumirun3m" target="_blank" rel="noopener" class="btn-or" style="font-size:12px;padding:12px 22px">🚀 Financer</a></div></div>
+        <div class="b-content"><div class="b-title">LUMIRUN 3M HARNESS</div><div class="b-sub">// INFINITY — REMOVABLE CORE MODULE</div><p class="b-desc">The armor of night explorers. Removable IPX7 CORE module, Oeko-Tex fabric, 600-nit LED screen, GPS and SOS mode. Ulule campaign active.</p><div class="b-specs"><span class="b-spec">CORE MODULE</span><span class="b-spec">OEKO-TEX</span><span class="b-spec">3M 360°</span><span class="b-spec">GPS</span><span class="b-spec">600 NITS</span><span class="b-spec">IPX7</span></div><div class="b-btns"><a href="https://forms.gle/C69yZSnJ2smXekJc9" target="_blank" rel="noopener" class="btn-r" style="font-size:12px;padding:12px 22px">✉️ Waitlist</a><a href="https://www.ulule.com/lumirun3m" target="_blank" rel="noopener" class="btn-or" style="font-size:12px;padding:12px 22px">🚀 Back us</a></div></div>
       </div>
     </div>
   </div>
@@ -1444,7 +1441,7 @@ canvas{display:block}
 <section class="shop-section" id="shop">
   <div class="shop-inner">
     <div class="sec-hdr reveal">
-      <span class="tag">// Nos plateformes</span>
+      <span class="tag">// Our platforms</span>
       <h2>STORE &amp; <span style="color:var(--rouge)">FUNDING</span></h2>
     </div>
     <div class="shop-grid reveal">
@@ -1468,15 +1465,15 @@ canvas{display:block}
         <rect x="82" y="55" width="36" height="18" rx="4" fill="#96bf48" opacity="0.2" stroke="#96bf48" stroke-width="1"/>
         <text x="100" y="67" font-size="8" fill="#96bf48" text-anchor="middle" font-family="monospace" font-weight="bold">34,99€</text>
       </svg>
-      <div class="shop-badge badge-shopify">BOUTIQUE LIVE</div>
+      <div class="shop-badge badge-shopify">STORE LIVE</div>
     </div>
     <div class="shop-card-body">
       <div class="shop-card-title">LUMIRUNNER STORE</div>
       <div class="shop-card-desc">The Born Different lifestyle collection available now. Shorts, t-shirts, hoodies, caps — everything you need to show your pack membership.</div>
       <div class="shop-stats-row">
-        <div class="shop-stat"><span class="shop-stat-num">7</span><span class="shop-stat-lbl">PRODUITS</span></div>
-        <div class="shop-stat"><span class="shop-stat-num">34€</span><span class="shop-stat-lbl">DEPUIS</span></div>
-        <div class="shop-stat"><span class="shop-stat-num">POD</span><span class="shop-stat-lbl">ZÉRO STOCK</span></div>
+        <div class="shop-stat"><span class="shop-stat-num">7</span><span class="shop-stat-lbl">PRODUCTS</span></div>
+        <div class="shop-stat"><span class="shop-stat-num">34€</span><span class="shop-stat-lbl">FROM</span></div>
+        <div class="shop-stat"><span class="shop-stat-num">POD</span><span class="shop-stat-lbl">NO STOCK</span></div>
       </div>
       <div class="shop-products">
         <span class="shop-product">Short</span>
@@ -1513,24 +1510,24 @@ canvas{display:block}
         <circle cx="160" cy="35" r="2" fill="#FF6B35" opacity="0.7"/>
         <circle cx="35" cy="60" r="1.5" fill="white" opacity="0.4"/>
       </svg>
-      <div class="shop-badge badge-ulule">CAMPAGNE ACTIVE</div>
+      <div class="shop-badge badge-ulule">CAMPAIGN ACTIVE</div>
     </div>
     <div class="shop-card-body">
       <div class="shop-card-title">ULULE — LUMIRUN3M</div>
-      <div class="shop-card-desc">Notre campagne de crowdfunding est en ligne. Finance le développement du harnais LumiRun 3M Infinity et reçois ton exemplaire en priorité.</div>
+      <div class="shop-card-desc">Our crowdfunding campaign is live. Back the development of the LumiRun 3M Infinity harness and receive yours as a priority backer.</div>
       <div class="ulule-bar-wrap">
         <div style="display:flex;justify-content:space-between;margin-bottom:6px">
-          <span style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--rouge)">FINANCEMENT EN COURS</span>
+          <span style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--rouge)">FUNDING IN PROGRESS</span>
           <span style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--argent)">ulule.com/lumirun3m</span>
         </div>
         <div class="ulule-bar-bg"><div class="ulule-bar-fill"></div></div>
-        <div class="ulule-bar-labels"><span>0€ collectés</span><span>Objectif →</span></div>
+        <div class="ulule-bar-labels"><span>€0 raised</span><span>Goal →</span></div>
       </div>
       <div class="shop-products">
-        <span class="shop-product">5€ — Badge fondateur</span>
-        <span class="shop-product">29€ — Short édition limitée</span>
-        <span class="shop-product">99€ — Early bird harnais</span>
-        <span class="shop-product">499€ — Pack fondateur</span>
+        <span class="shop-product">€5 — Founder badge</span>
+        <span class="shop-product">€29 — Limited edition short</span>
+        <span class="shop-product">€99 — Early bird harness</span>
+        <span class="shop-product">€499 — Founder pack</span>
       </div>
       <div class="shop-btns">
         <a href="https://www.ulule.com/lumirun3m" target="_blank" rel="noopener" class="btn-or" style="font-size:13px;padding:13px 28px">🚀 Back on Ulule</a>
@@ -1549,18 +1546,18 @@ canvas{display:block}
 
 <section id="crowdfunding">
   <div class="crowd-inner">
-    <span class="tag">// Financement participatif</span>
-    <h2 class="reveal">CONSTRUISONS<br>ÇA <em>ENSEMBLE</em></h2>
-    <p class="reveal">LumiRun 3M se construit avec sa communauté. Rejoins la waitlist ou finance notre campagne Ulule.</p>
+    <span class="tag">// Crowdfunding</span>
+    <h2 class="reveal">LET'S BUILD<br>THIS <em>TOGETHER</em></h2>
+    <p class="reveal">LumiRun 3M is built with its community. Join the waitlist or back our Ulule campaign.</p>
     <div class="crowd-btns reveal">
-      <a href="https://forms.gle/C69yZSnJ2smXekJc9" target="_blank" class="btn-r">✉️ Rejoindre la waitlist</a>
+      <a href="https://forms.gle/C69yZSnJ2smXekJc9" target="_blank" class="btn-r">✉️ Join the waitlist</a>
       <a href="https://www.ulule.com/lumirun3m" target="_blank" rel="noopener" class="btn-or">🚀 Back on Ulule</a>
     </div>
     <div class="veille-box reveal">
-      <h3>VOUS ÊTES INVESTISSEUR ?</h3>
-      <div class="v-kpis"><div class="v-kpi"><span class="v-kpi-num">44Mds$</span><span class="v-kpi-lbl">MARCHÉ MONDIAL</span></div><div class="v-kpi"><span class="v-kpi-num">12,4M</span><span class="v-kpi-lbl">RUNNERS FRANCE</span></div><div class="v-kpi"><span class="v-kpi-num">0</span><span class="v-kpi-lbl">CONCURRENT DIRECT</span></div></div>
-      <p>Analyse de marché complète : taille du marché, tendances wearables, analyse concurrentielle.</p>
-      <button class="btn-veille" onclick="openVeille()">📊 Voir la veille commerciale →</button>
+      <h3>ARE YOU AN INVESTOR?</h3>
+      <div class="v-kpis"><div class="v-kpi"><span class="v-kpi-num">$44B</span><span class="v-kpi-lbl">GLOBAL MARKET</span></div><div class="v-kpi"><span class="v-kpi-num">12.4M</span><span class="v-kpi-lbl">RUNNERS IN FRANCE</span></div><div class="v-kpi"><span class="v-kpi-num">0</span><span class="v-kpi-lbl">DIRECT COMPETITOR</span></div></div>
+      <p>Full market analysis: market size, wearables trends, competitive landscape.</p>
+      <button class="btn-veille" onclick="openVeille()">📊 View market intelligence →</button>
     </div>
   </div>
 </section>
@@ -1569,20 +1566,20 @@ canvas{display:block}
 
 <section id="waitlist">
   <div class="wait-inner">
-    <span class="tag">// Rejoins la meute</span>
-    <h2 class="reveal">EXPLORE<br><em>SANS LIMITES.</em></h2>
-    <p class="reveal">200+ explorateurs nocturnes ont déjà rejoint la communauté LumiRun 3M.</p>
-    <div class="wait-btns reveal"><a href="https://forms.gle/C69yZSnJ2smXekJc9" target="_blank" class="btn-r">✉️ Rejoindre gratuitement</a><a href="https://ulule.com/lumirun3m" target="_blank" class="btn-or">🚀 Back on Ulule</a></div>
-    <div class="wait-stats reveal"><div><span class="ws-num">200+</span><span class="ws-lbl">INSCRITS</span></div><div><span class="ws-num">0€</span><span class="ws-lbl">POUR S'INSCRIRE</span></div><div><span class="ws-num">1ER</span><span class="ws-lbl">ACCÈS GARANTI</span></div></div>
+    <span class="tag">// Join the pack</span>
+    <h2 class="reveal">EXPLORE<br><em>WITHOUT LIMITS.</em></h2>
+    <p class="reveal">200+ night explorers have already joined the LumiRun 3M community.</p>
+    <div class="wait-btns reveal"><a href="https://forms.gle/C69yZSnJ2smXekJc9" target="_blank" class="btn-r">✉️ Join for free</a><a href="https://www.ulule.com/lumirun3m" target="_blank" class="btn-or">🚀 Back on Ulule</a></div>
+    <div class="wait-stats reveal"><div><span class="ws-num">200+</span><span class="ws-lbl">MEMBERS</span></div><div><span class="ws-num">€0</span><span class="ws-lbl">TO JOIN</span></div><div><span class="ws-num">1ST</span><span class="ws-lbl">ACCESS GUARANTEED</span></div></div>
   </div>
 </section>
 
 <!-- CTA FINAL -->
 
 <section id="cta-final">
-  <h2 class="reveal">COURS<br><em>SANS PEUR.</em></h2>
-  <p class="reveal">Running, trail, montagne, eau ou exploration. LumiRun 3M te rend visible, connecté et protégé.</p>
-  <div class="cta-btns reveal"><a href="https://forms.gle/C69yZSnJ2smXekJc9" target="_blank" class="btn-r" style="font-size:15px;padding:18px 48px">✉️ Waitlist gratuite</a><a href="https://ulule.com/lumirun3m" target="_blank" class="btn-or" style="font-size:15px;padding:18px 44px">🚀 Back on Ulule</a><button class="btn-veille" onclick="openVeille()">📊 Dossier investisseurs</button></div>
+  <h2 class="reveal">RUN<br><em>WITHOUT FEAR.</em></h2>
+  <p class="reveal">Running, trail, mountains, water or exploration. LumiRun 3M keeps you visible, connected and protected.</p>
+  <div class="cta-btns reveal"><a href="https://forms.gle/C69yZSnJ2smXekJc9" target="_blank" class="btn-r" style="font-size:15px;padding:18px 48px">✉️ Free Waitlist</a><a href="https://www.ulule.com/lumirun3m" target="_blank" class="btn-or" style="font-size:15px;padding:18px 44px">🚀 Back on Ulule</a><button class="btn-veille" onclick="openVeille()">📊 Investor deck</button></div>
 </section>
 
 </main>
@@ -1591,9 +1588,9 @@ canvas{display:block}
 
 <footer>
   <div class="f-inner">
-    <div><div class="f-brand">LUMI<em>RUN</em> 3M</div><div class="f-tag">L'ARMURE DES EXPLORATEURS NOCTURNES</div><p style="font-size:11px;color:rgba(255,255,255,0.2);margin-top:8px;max-width:220px;line-height:1.6">Harnais connecté sport extrême nocturne — Prototype en développement. Paris, France.</p></div>
-    <div><div class="f-nav-title">NAVIGATION</div><ul class="f-links"><li><a href="#features">Le produit</a></li><li><a href="#sports">Sports couverts</a></li><li><a href="#histoire-outer">Notre histoire</a></li><li><a href="#lumi-game">LUMI Game</a></li><li><a href="#boutique">Boutique</a></li><li><a href="#waitlist">Waitlist</a></li></ul></div>
-    <div><div class="f-nav-title">LIENS</div><ul class="f-links"><li><a href="https://forms.gle/C69yZSnJ2smXekJc9" target="_blank">✉️ Rejoindre la waitlist</a></li><li><a href="https://ulule.com/lumirun3m" target="_blank">🚀 Back on Ulule</a></li><li><a href="javascript:void(0)" onclick="openVeille()">📊 Dossier investisseurs</a></li><li><a href="https://instagram.com/lumirun3am" target="_blank">Instagram @lumirun3am</a></li><li><a href="mailto:contact@lumirun3m.fr">contact@lumirun3m.fr</a></li></ul></div>
+    <div><div class="f-brand">LUMI<em>RUN</em> 3M</div><div class="f-tag">THE ARMOR OF NIGHT EXPLORERS</div><p style="font-size:11px;color:rgba(255,255,255,0.2);margin-top:8px;max-width:220px;line-height:1.6">Connected night sport harness — Prototype in development. Paris, France.</p></div>
+    <div><div class="f-nav-title">NAVIGATION</div><ul class="f-links"><li><a href="#features">The product</a></li><li><a href="#sports">Sports</a></li><li><a href="#histoire-outer">Our story</a></li><li><a href="#lumi-game">LUMI Dodge</a></li><li><a href="#boutique">Store</a></li><li><a href="#waitlist">Waitlist</a></li></ul></div>
+    <div><div class="f-nav-title">LINKS</div><ul class="f-links"><li><a href="https://forms.gle/C69yZSnJ2smXekJc9" target="_blank">✉️ Join the waitlist</a></li><li><a href="https://www.ulule.com/lumirun3m" target="_blank">🚀 Back on Ulule</a></li><li><a href="javascript:void(0)" onclick="openVeille()">📊 Investor deck</a></li><li><a href="https://instagram.com/lumirun3am" target="_blank">Instagram @lumirun3am</a></li><li><a href="mailto:contact@lumirun3m.fr">contact@lumirun3m.fr</a></li></ul></div>
   </div>
   <div class="f-bottom"><span>© 2025 LUMIRUN 3M — PARIS, FRANCE — TOUS DROITS RÉSERVÉS</span><span>Harnais running connecté · Trail réfléchissant · Randonnée nocturne · 3M Scotchlite · Sport extrême nuit</span></div>
 </footer>
