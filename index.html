@@ -4,11 +4,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
 <!-- ═══════════════════════════════════════════════
-  SEO ULTRA COMPLET — LumiRun 3M v3.0
+  LUMIRUN 3M — lumirun3m.fr
+  SEO ULTRA COMPLET v4.0
   Running · Trail · VTT · Kayak · Marathon · HYROX
   Triathlon · Alpinisme · GoPro · Sports extrêmes
+
+  ✅ SÉCURITÉ : CSP · X-Frame · XSS · RGPD
+  ✅ STABILITÉ : Error handling · Fallbacks · PWA
+  ✅ ACCESSIBILITÉ : WCAG 2.1 · ARIA · Sémantique
 ════════════════════════════════════════════════ -->
+
+<!-- ═══ SÉCURITÉ HTTP — Headers de protection ═══ -->
+
+<meta http-equiv="Content-Security-Policy" content="
+default-src 'self';
+script-src 'self' 'unsafe-inline' https://www.clarity.ms https://formspree.io;
+style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+font-src 'self' https://fonts.gstatic.com;
+img-src 'self' data: https:;
+connect-src 'self' https://formspree.io https://api.indexnow.org https://www.clarity.ms;
+frame-ancestors 'none';
+base-uri 'self';
+form-action 'self' https://formspree.io;
+upgrade-insecure-requests;
+">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), bluetooth=(), interest-cohort=()">
+<meta http-equiv="X-XSS-Protection" content="1; mode=block">
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+
 <title>LumiRun 3M — Harnais Sport Connecté | Running Trail VTT Kayak Marathon HYROX | GPS SOS 3M</title>
 <meta name="description" content="LumiRun 3M : harnais sport connecté 3M Scotchlite 360°, LEDs, GPS, SOS. Pour running, trail, VTT nocturne, kayak, marathon, HYROX, triathlon et alpinisme. Visible à 300m. Campagne Ulule active.">
 <meta name="keywords" content="harnais running connecté, gilet running réfléchissant, sécurité running nuit, 3M Scotchlite running, gilet trail réfléchissant, équipement running nocturne, VTT nuit équipement, VTT nocturne sécurité, enduro nuit visibilité, kayak nuit équipement, kayak mer nocturne, marathon nocturne équipement, HYROX équipement, HYROX training gear, obstacle race nuit, triathlon nuit équipement, swimrun équipement, alpinisme nuit équipement, via ferrata nuit, randonnée nocturne sécurité, GoPro running accessoire, action sports équipement nuit, wearable running GPS, harnais running GPS SOS, gilet LED running, lumirun, lumirun3m, lumirunner, born different running, explorateur nocturne équipement, ultra trail nuit, UTMB équipement">
@@ -626,33 +654,210 @@ footer{background:var(–gris2);padding:60px}
 .reveal-r{opacity:0;transform:translateX(28px);transition:opacity 0.7s ease,transform 0.7s ease}
 .reveal-r.vis{opacity:1;transform:none}
 
+/* ═══════════════════════════════════════════
+MOBILE OPTIMISÉ — iPhone 12/13/14/15/16
+Breakpoints : 480px · 390px · 375px
+═══════════════════════════════════════════ */
+
+/* ── TABLETTE & GRAND MOBILE (max 900px) ── */
 @media(max-width:900px){
-nav{padding:0 20px}.nav-links{display:none}.nav-dots{display:none}
-.nuit-inner,.histoire-inner,.boutique-grid{grid-template-columns:1fr;gap:40px}
-.nuit-right{height:280px}.histoire-right{height:260px}
+/* Nav */
+nav{padding:0 20px}
+.nav-links{display:none}
+.nav-dots{display:none}
+.nav-cta{padding:8px 16px;font-size:11px}
+
+/* Sections générales */
+section{padding:80px 20px}
 .boutique-inner,.crowd-inner,.wait-inner{padding:0 20px}
+
+/* Grilles → colonne unique */
+.nuit-inner,.histoire-inner,.boutique-grid{
+grid-template-columns:1fr;gap:40px
+}
+.nuit-right{height:280px}
+.histoire-right{height:260px}
+
+/* Scroll horizontal */
 .h-scroll-track,.sports-swipe{padding:0 20px 20px}
-footer{padding:40px 20px}.f-inner{flex-direction:column}.f-bottom{flex-direction:column}
-.wait-stats{gap:24px}.v-stats{grid-template-columns:1fr}
+
+/* Footer */
+footer{padding:40px 20px}
+.f-inner{flex-direction:column;gap:32px}
+.f-bottom{flex-direction:column;gap:12px;text-align:center}
+
+/* Stats waitlist */
+.wait-stats{gap:24px}
+
+/* Dossier investisseurs */
+.v-stats{grid-template-columns:1fr 1fr}
 .v-trends,.v-oppo{grid-template-columns:1fr}
+
+/* Jeu */
 #gameCanvas{height:320px}
 .game-container{padding:0 12px}
 }
-/* ── PERFORMANCE — Core Web Vitals ── */
-/* content-visibility pour sections hors écran */
-#features,#sports,#histoire-outer,#lumi-game,#boutique,#shop,#crowdfunding,#waitlist,#cta-final{content-visibility:auto;contain-intrinsic-size:0 800px}
-/* will-change uniquement sur éléments animés actifs */
-.h-scroll-track{will-change:transform}
-.loader-fill{will-change:width}
-/* Optimisation rendu texte */
-h1,h2,h3{text-rendering:optimizeSpeed}
-/* Éviter CLS sur images/canvas */
-canvas{display:block}
-/* Réduction animations sur mobile bas de gamme */
-@media(max-width:480px){
+
+/* ── MOBILE STANDARD iPhone 12/13/14 (max 430px) ── */
+@media(max-width:430px){
+/* Nav mobile */
+nav{padding:0 16px;height:56px}
+.nav-logo{font-size:18px}
+.nav-cta{padding:7px 14px;font-size:10px;letter-spacing:1px}
+
+/* Hero — plein écran propre */
+#hero{padding:80px 20px 60px;min-height:100svh}
+.hero-title{font-size:clamp(52px,14vw,72px);line-height:0.85}
+.hero-sub{font-size:14px;max-width:100%;padding:0}
+.hero-stats{gap:0;flex-wrap:wrap}
+.hero-stat{padding:14px 12px;min-width:50%;flex:1 1 50%}
+.hero-stat-num{font-size:32px}
+.hero-stat-lbl{font-size:7px}
+.hero-btns{flex-direction:column;gap:10px;width:100%}
+.btn-hero-primary,.btn-hero-secondary,.btn-hero-gold{
+width:100%;justify-content:center;padding:14px 20px;font-size:11px
+}
+
+/* Ticker */
+.ticker-item{font-size:10px;margin-right:40px}
+
+/* Section nuit */
+#nuit{padding:60px 20px}
+.nuit-big{font-size:clamp(100px,28vw,140px)}
+.nuit-title{font-size:clamp(28px,8vw,42px)}
+.nuit-stats{gap:20px;flex-wrap:wrap}
+.nuit-stat{min-width:80px}
+.nstat-num{font-size:28px}
+
+/* Features scroll */
+.feat-card{width:260px;padding:28px 22px}
+.feat-icon{width:40px;height:40px}
+.feat-title{font-size:18px}
+
+/* Sports */
+.sport-card{min-width:300px}
+.sc-title{font-size:clamp(32px,9vw,48px)}
+
+/* Campfire */
+#campfire{padding:60px 20px}
+.campfire-text h2{font-size:clamp(44px,12vw,64px)}
+.campfire-btns{flex-direction:column;gap:10px;width:100%}
+.campfire-btns a,.campfire-btns button{width:100%;text-align:center;justify-content:center}
+
+/* Histoire */
+.h-title{font-size:clamp(40px,11vw,60px)}
+.h-step{padding:20px}
+.h-step-title{font-size:18px}
+
+/* Boutique */
+#boutique{padding:60px 20px}
+.boutique-grid{gap:2px}
+.b-card{padding:24px 20px}
+.b-title{font-size:18px}
+.b-specs{flex-wrap:wrap;gap:6px}
+.b-btns{flex-direction:column;gap:8px}
+.b-btns a{width:100%;text-align:center;justify-content:center;font-size:11px}
+
+/* Shop & Ulule */
+#shop{padding:60px 20px}
+.shop-grid{grid-template-columns:1fr;gap:2px}
+.shop-card-title{font-size:20px}
+.ulule-bar-labels{font-size:9px}
+.shop-products{flex-wrap:wrap;gap:6px}
+.shop-btns{flex-direction:column;gap:8px}
+.shop-btns a{width:100%;text-align:center;justify-content:center}
+
+/* Crowdfunding */
+#crowdfunding{padding:60px 20px}
+.crowd-title{font-size:clamp(44px,12vw,64px)}
+.v-kpis{flex-wrap:wrap;gap:16px}
+.v-kpi{min-width:calc(50% - 8px)}
+.crowd-btns{flex-direction:column;gap:10px;width:100%}
+.crowd-btns a{width:100%;text-align:center;justify-content:center}
+
+/* Blog */
+.blog-grid{gap:2px}
+.blog-card{padding:20px}
+.blog-title{font-size:18px}
+
+/* CTA Final */
+#cta-final{padding:80px 20px}
+.cta-title{font-size:clamp(48px,13vw,72px)}
+.cta-btns{flex-direction:column;gap:10px;width:100%}
+.cta-btns a,.cta-btns button{width:100%;text-align:center;justify-content:center;padding:14px 20px}
+
+/* Waitlist modale */
+.wl-content{padding:32px 20px;max-width:100%}
+.wl-title{font-size:clamp(36px,10vw,52px)}
+.wl-benefits{grid-template-columns:1fr;gap:8px}
+.wl-form-fields{gap:12px}
+.wl-input,.wl-select{padding:12px 14px;font-size:14px}
+.wl-btn{padding:14px 20px;font-size:11px}
+
+/* Jeu LUMI */
+#lumi-game{padding:60px 12px}
+#gameCanvas{height:280px}
+.game-section-hdr h2{font-size:clamp(36px,10vw,52px)}
+.go-logo{font-size:40px}
+.go-controls{flex-direction:column;gap:8px;align-items:center}
+.go-btn{padding:12px 28px;font-size:12px}
+
+/* Footer mobile */
+footer{padding:48px 20px 100px}
+.f-brand{font-size:22px}
+.f-tag{font-size:9px}
+.f-links{gap:12px}
+.f-copy{font-size:9px;text-align:center}
+
+/* Cookie banner mobile */
+#cookie-banner{padding:16px 20px;flex-direction:column;align-items:flex-start}
+#cookie-banner p{font-size:10px}
+
+/* Dossier investisseurs mobile */
+.v-stats{grid-template-columns:1fr}
+.veille-panel{padding:24px 16px}
+.v-hdr{padding:32px 0 24px}
+.v-table{font-size:10px}
+.v-table th,.v-table td{padding:7px 8px}
+
+/* Sections communes */
+.sec-inner{padding:0}
+.tag{font-size:8px;letter-spacing:3px}
+
+/* Cacher canvas lourds sur petit mobile */
 #wolf-pack,#smoke-canvas,#light-canvas{display:none}
 .hero-line{display:none}
+.hero-geo,.hero-year{display:none}
 }
+
+/* ── PETIT MOBILE iPhone SE / 375px ── */
+@media(max-width:375px){
+.hero-title{font-size:clamp(48px,13vw,64px)}
+.nuit-big{font-size:clamp(90px,25vw,120px)}
+.hero-stat{padding:12px 8px}
+.hero-stat-num{font-size:28px}
+.feat-card{width:240px;padding:24px 18px}
+.sport-card{min-width:280px}
+.sc-title{font-size:clamp(28px,8vw,40px)}
+}
+
+/* ── SAFE AREA iPhone (notch/Dynamic Island) ── */
+@supports(padding-bottom:env(safe-area-inset-bottom)){
+footer{padding-bottom:calc(32px + env(safe-area-inset-bottom))}
+#cookie-banner{padding-bottom:calc(16px + env(safe-area-inset-bottom))}
+nav{padding-top:env(safe-area-inset-top)}
+}
+
+/* ── PERFORMANCE — Core Web Vitals ── */
+#features,#sports,#histoire-outer,#lumi-game,#boutique,#shop,#crowdfunding,#waitlist,#cta-final{
+content-visibility:auto;contain-intrinsic-size:0 800px
+}
+.h-scroll-track{will-change:transform}
+.loader-fill{will-change:width}
+h1,h2,h3{text-rendering:optimizeSpeed}
+canvas{display:block}
+
+/* ── ACCESSIBILITÉ — Réduction mouvements ── */
 @media(prefers-reduced-motion:reduce){
 *{animation-duration:0.01ms!important;transition-duration:0.01ms!important}
 #wolf-pack,#smoke-canvas,#light-canvas,#campfireCanvas{display:none}
@@ -725,6 +930,23 @@ canvas{display:block}
 <canvas id="light-canvas" aria-hidden="true"></canvas>
 <canvas id="wolf-pack" aria-hidden="true"></canvas>
 <canvas id="smoke-canvas" aria-hidden="true"></canvas>
+
+<!-- ═══ COOKIE BANNER RGPD ═══ -->
+
+<div id="cookie-banner" role="dialog" aria-modal="true" aria-label="Consentement cookies" style="position:fixed;bottom:0;left:0;right:0;z-index:99999;background:rgba(10,0,0,0.97);border-top:1px solid rgba(204,0,0,0.3);padding:16px 32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;transform:translateY(100%);animation:cookieSlide 0.5s 1.5s ease forwards;backdrop-filter:blur(20px)">
+  <p style="font-family:'Share Tech Mono',monospace;font-size:11px;color:rgba(255,255,255,0.4);line-height:1.7;max-width:700px;margin:0">
+    🔒 LumiRun 3M utilise Microsoft Clarity pour analyser anonymement l'utilisation du site et améliorer l'expérience. Aucune donnée personnelle n'est vendue ou partagée. Conforme RGPD.
+    <a href="mailto:contact@lumirun3m.fr" style="color:#CC0000;text-decoration:none"> contact@lumirun3m.fr</a>
+  </p>
+  <div style="display:flex;gap:8px;flex-shrink:0">
+    <button onclick="refuseCookies()" style="background:transparent;color:rgba(255,255,255,0.35);border:1px solid rgba(255,255,255,0.12);padding:9px 18px;font-family:'Share Tech Mono',monospace;font-size:9px;letter-spacing:1px;cursor:pointer;transition:all 0.2s" onmouseover="this.style.borderColor='rgba(255,255,255,0.4)';this.style.color='rgba(255,255,255,0.7)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.12)';this.style.color='rgba(255,255,255,0.35)'">REFUSER</button>
+    <button onclick="acceptCookies()" style="background:#CC0000;color:#fff;border:none;padding:9px 24px;font-family:'Share Tech Mono',monospace;font-size:9px;letter-spacing:2px;cursor:pointer;transition:background 0.2s" onmouseover="this.style.background='#FF0000'" onmouseout="this.style.background='#CC0000'">ACCEPTER</button>
+  </div>
+</div>
+<style>
+@keyframes cookieSlide{to{transform:translateY(0)}}
+#cookie-banner.hidden{display:none!important}
+</style>
 
 <!-- LOADER -->
 
@@ -3952,7 +4174,79 @@ if('serviceWorker' in navigator){
 })();
 
 // ══════════════════════════════════════
-// ANALYTICS EVENTS — Tracking conversions
+// SÉCURITÉ — Cookie RGPD
+// ══════════════════════════════════════
+(function(){
+  try{
+    if(localStorage.getItem('lm3m_cookie_consent')){
+      document.getElementById('cookie-banner').classList.add('hidden');
+    }
+  }catch(e){}
+})();
+function acceptCookies(){
+  try{localStorage.setItem('lm3m_cookie_consent','accepted')}catch(e){}
+  const b=document.getElementById('cookie-banner');if(b)b.classList.add('hidden');
+}
+function refuseCookies(){
+  try{localStorage.setItem('lm3m_cookie_consent','refused')}catch(e){}
+  const b=document.getElementById('cookie-banner');if(b)b.classList.add('hidden');
+  // Désactiver Clarity si refusé
+  if(window.clarity) window.clarity('stop');
+}
+
+// ══════════════════════════════════════
+// SÉCURITÉ — Sanitisation inputs
+// Protège contre XSS et injections
+// ══════════════════════════════════════
+function sanitizeInput(val){
+  if(typeof val !== 'string') return '';
+  return val
+    .replace(/&/g,'&amp;')
+    .replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;')
+    .replace(/'/g,'&#x27;')
+    .replace(/\//g,'&#x2F;')
+    .trim()
+    .slice(0, 500); // Limite de caractères
+}
+function sanitizeEmail(email){
+  const re = /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/;
+  return re.test(email) ? email : null;
+}
+
+// ══════════════════════════════════════
+// SÉCURITÉ — Rate limiting local
+// Empêche les soumissions répétées
+// ══════════════════════════════════════
+const rateLimiter = {
+  attempts: {},
+  check(key, maxAttempts=3, windowMs=60000){
+    const now = Date.now();
+    if(!this.attempts[key]) this.attempts[key] = [];
+    this.attempts[key] = this.attempts[key].filter(t => now-t < windowMs);
+    if(this.attempts[key].length >= maxAttempts) return false;
+    this.attempts[key].push(now);
+    return true;
+  }
+};
+
+// ══════════════════════════════════════
+// SÉCURITÉ — Error boundary global
+// Empêche les erreurs JS de casser le site
+// ══════════════════════════════════════
+window.addEventListener('error', e=>{
+  console.error('LumiRun 3M Error:', e.message);
+  // Ne pas exposer les erreurs aux utilisateurs
+  return true;
+});
+window.addEventListener('unhandledrejection', e=>{
+  console.error('LumiRun 3M Promise Error:', e.reason);
+  e.preventDefault();
+});
+
+// ══════════════════════════════════════
+// ANALYTICS — Tracking sécurisé
 // Prêt pour Google Analytics 4 + GTM
 // ══════════════════════════════════════
 (function(){
